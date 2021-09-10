@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forside</title>
+     <link rel="stylesheet" href="style.css" />
   </head>
   <style>
     * {
@@ -16,15 +17,23 @@
     }
 
     #bg_container {
-      background-image: url("billeder/splash.jpg");
+      background-image: url("billeder/bg_oversigt.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       height: 100vh;
       height: 100vh;
       overflow: scroll;
       background-position: center;
+      position: fixed;
     }
 
+    #bg_oversigt_mask {
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+      opacity: 60%;
+      position: fixed;
+    }
     img {
       width: 80%;
       height: auto;
@@ -81,19 +90,25 @@
     .selected {
       color: #e2a326;
     }
+
+
   </style>
 
   <body>
     <div id="bg_container">
+      <div id="bg_oversigt_mask"></div>
       <header>
-        <nav>
-          <ul id="menu">
+          <nav>
+          <img src="./logo/ølklubben_logo.svg" alt="logo" />
+          <ul id="menu" class="hidden">
             <li><a href="index.html">FORSIDE</a></li>
             <li><a href="oversigt.html">ØL</a></li>
             <li><a href="klubben.html">KLUBBEN</a></li>
             <li><a href="events.html">EVENTS</a></li>
           </ul>
-        </nav>
+          <div id="menuknap">☰</div>
+        </div>
+      </nav>
       </header>
 
       <div>
@@ -118,9 +133,11 @@
           <template>
             <article id="info">
               <div class="produktContainer">
-                <h3></h3>
-                <img src="" alt="" />
-              </div>
+              
+                  <h3></h3>
+                  <img src="" alt="" />
+             
+              
               <div class="produktInfo">
                 <p class="anbefaling"></p>
                 <button id="mereInfo">Mere info</button>
@@ -152,67 +169,8 @@
         </article>
       </section>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", start);
-
-      let header = document.querySelector("#typer");
-      let oller;
-      let filter = "alle";
-
-      function start() {
-        const filterKnapper = document.querySelectorAll(".sidebar a");
-        document.querySelector(".valgt").classList.add("selected");
-        filterKnapper.forEach((knap) =>
-          knap.addEventListener("click", filtrerOller)
-        );
-        hentData();
-      }
-
-      function filtrerOller() {
-        filter = this.dataset.type;
-        document.querySelector(".selected").classList.remove("selected");
-        this.classList.add("selected");
-
-        visOller();
-        //header.textContent = this.textContent;
-      }
-      const url = "https://olklubben-195d.restdb.io/rest/oloversigt";
-      const options = {
-        headers: {
-          "x-apikey": "6139e30043cedb6d1f97eee3",
-        },
-      };
-      async function hentData() {
-        const respons = await fetch(url, options);
-        oller = await respons.json();
-        visOller();
-        console.log(oller);
-      }
-
-      function visOller() {
-        const container = document.querySelector("#json");
-        const menu = document.querySelector("template");
-        container.textContent = "";
-        oller.forEach((ol) => {
-          if (filter == ol.type || filter == "alle") {
-            let klon = menu.cloneNode(true).content;
-
-            klon.querySelector("h3").textContent = ol.navn;
-            klon.querySelector(".anbefaling").textContent = ol.anbefaling;
-            klon.querySelector(".procent").textContent =
-              ol.alkoholprocent + "%";
-
-            klon.querySelector(".rating").textContent = ol.rating + "/10";
-            klon.querySelector("img").src = "./billeder/" + ol.billede;
-
-            klon
-              .querySelector("article #mereInfo")
-              .addEventListener("click", () => visOllen(ol));
-
-            container.appendChild(klon);
-          }
-        });
-      }
+    
+    <script src="java.js">
     </script>
   </body>
 </html>
