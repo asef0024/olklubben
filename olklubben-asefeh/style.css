@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.forside {
+  background-image: url("billeder/splash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  filter: blur(3px) brightness(75%);
+  z-index: 0;
+  position: absolute;
+}
+
+#menu {
+  color: white;
+  display: flex;
+  list-style-type: none;
+  padding-top: 2rem;
+  font-size: 2rem;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.4rem;
+  z-index: 2;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a:hover {
+  color: rgb(182, 133, 27);
+  text-decoration: underline;
+}
+
+nav ul li {
+  padding-left: 3rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+a:visited {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.headline h1 {
+  z-index: 2;
+  font-size: 6rem;
+  color: rgb(182, 133, 27);
+  font-family: "Work Sans", sans-serif;
+  position: relative;
+  left: 12vw;
+  top: 15vw;
+}
+
+.headline p {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  z-index: 2;
+  position: relative;
+  left: 12.5vw;
+  top: 16vw;
+}
+
+.headline a:hover {
+  color: rgb(182, 133, 27);
+  text-decoration: underline;
+}
+
+nav img {
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+}
