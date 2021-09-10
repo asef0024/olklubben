@@ -13,8 +13,18 @@
     }
 
     body {
-      background-color: beige;
     }
+
+    #bg_container {
+      background-image: url("billeder/splash.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      height: 100vh;
+      overflow: scroll;
+      background-position: center;
+    }
+
     img {
       width: 80%;
       height: auto;
@@ -74,73 +84,74 @@
   </style>
 
   <body>
-    <header>
-      <nav>
-        <ul id="menu">
-          <li><a href="index.html">FORSIDE</a></li>
-          <li><a href="oversigt.html">ØL</a></li>
-          <li><a href="klubben.html">KLUBBEN</a></li>
-          <li><a href="events.html">EVENTS</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="bg_container">
+      <header>
+        <nav>
+          <ul id="menu">
+            <li><a href="index.html">FORSIDE</a></li>
+            <li><a href="oversigt.html">ØL</a></li>
+            <li><a href="klubben.html">KLUBBEN</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <div>
-      <h2>ØL</h2>
-      <p></p>
-    </div>
+      <div>
+        <h2>ØL</h2>
+        <p></p>
+      </div>
 
-    <section class="indhold">
-      <nav class="sidebar">
-        <ul>
-          <li><a data-type="alle" class="valgt">alle</a></li>
-          <li><a data-type="pilsner">Pilsner</a></li>
-          <li><a data-type="ipa">IPA</a></li>
-          <li><a data-type="porter">Porter</a></li>
-          <li><a data-type="juleol">Juleøl</a></li>
-        </ul>
-      </nav>
+      <section class="indhold">
+        <nav class="sidebar">
+          <ul>
+            <li><a data-type="alle" class="valgt">alle</a></li>
+            <li><a data-type="pilsner">Pilsner</a></li>
+            <li><a data-type="ipa">IPA</a></li>
+            <li><a data-type="porter">Porter</a></li>
+            <li><a data-type="juleol">Juleøl</a></li>
+          </ul>
+        </nav>
 
-      <section class="main">
-        <section id="json"></section>
+        <section class="main">
+          <section id="json"></section>
 
-        <template>
-          <article id="info">
-            <div class="produktContainer">
-              <h3></h3>
-              <img src="" alt="" />
-            </div>
-            <div class="produktInfo">
-              <p class="anbefaling"></p>
-              <button id="mereInfo">Mere info</button>
-              <div class="vl"></div>
-              <p>ABV:</p>
-              <p class="procent"></p>
-              <p>Rating:</p>
-              <p class="rating"></p>
-            </div>
-          </article>
-        </template>
+          <template>
+            <article id="info">
+              <div class="produktContainer">
+                <h3></h3>
+                <img src="" alt="" />
+              </div>
+              <div class="produktInfo">
+                <p class="anbefaling"></p>
+                <button id="mereInfo">Mere info</button>
+                <div class="vl"></div>
+                <p>ABV:</p>
+                <p class="procent"></p>
+                <p>Rating:</p>
+                <p class="rating"></p>
+              </div>
+            </article>
+          </template>
+        </section>
       </section>
-    </section>
 
-    <section id="popup">
-      <article>
-        <img src="" alt="" />
-        <div>
-          <h3></h3>
-          <p class="style"></p>
-          <p class="land"></p>
-          <p class="udseende"></p>
-          <p class="duft"></p>
-          <p class="smag"></p>
-          <p class="procent"></p>
-          <p class="anbefaling"></p>
-          <p class="rating"></p>
-        </div>
-      </article>
-    </section>
-
+      <section id="popup">
+        <article>
+          <img src="" alt="" />
+          <div>
+            <h3></h3>
+            <p class="style"></p>
+            <p class="land"></p>
+            <p class="udseende"></p>
+            <p class="duft"></p>
+            <p class="smag"></p>
+            <p class="procent"></p>
+            <p class="anbefaling"></p>
+            <p class="rating"></p>
+          </div>
+        </article>
+      </section>
+    </div>
     <script>
       document.addEventListener("DOMContentLoaded", start);
 
