@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forside</title>
-
-    <link rel="stylesheet" href="style.css" />
   </head>
   <style>
     * {
-      margin: 3px;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: beige;
     }
     img {
-      width: 10%;
+      width: 80%;
       height: auto;
     }
     .indhold {
@@ -21,9 +24,16 @@
     }
 
     #info {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      display: grid;
+    }
+
+    .produktInfo {
+      display: none;
+    }
+
+    .produktContainer {
+      position: relative;
+      text-align: center;
     }
 
     /* lodret streg*/
@@ -33,7 +43,7 @@
     }
 
     .main {
-      margin-left: 5%;
+      margin-left: 45%;
     }
 
     /* øl type nav bar*/
@@ -42,15 +52,24 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: fixed;
+      top: 30vh;
+      z-index: 1;
+      width: auto;
+      overflow-x: hidden;
+      background-color: #24221d;
+      color: #fffdf3;
     }
 
     .sidebar li a {
       display: block;
       width: 60px;
       margin: 20px;
+      padding: 0.2rem;
+    }
+
+    .selected {
+      color: #e2a326;
     }
   </style>
 
@@ -74,7 +93,7 @@
     <section class="indhold">
       <nav class="sidebar">
         <ul>
-          <li><a data-type="alle" class="valgt">Alle</a></li>
+          <li><a data-type="alle" class="valgt">alle</a></li>
           <li><a data-type="pilsner">Pilsner</a></li>
           <li><a data-type="ipa">IPA</a></li>
           <li><a data-type="porter">Porter</a></li>
@@ -87,14 +106,14 @@
 
         <template>
           <article id="info">
-            <img src="" alt="" />
-            <div>
+            <div class="produktContainer">
               <h3></h3>
+              <img src="" alt="" />
+            </div>
+            <div class="produktInfo">
               <p class="anbefaling"></p>
               <button id="mereInfo">Mere info</button>
-            </div>
-            <div class="vl"></div>
-            <div>
+              <div class="vl"></div>
               <p>ABV:</p>
               <p class="procent"></p>
               <p>Rating:</p>
@@ -131,6 +150,7 @@
 
       function start() {
         const filterKnapper = document.querySelectorAll(".sidebar a");
+        document.querySelector(".valgt").classList.add("selected");
         filterKnapper.forEach((knap) =>
           knap.addEventListener("click", filtrerOller)
         );
@@ -139,11 +159,11 @@
 
       function filtrerOller() {
         filter = this.dataset.type;
-        document.querySelector(".valgt").classList.remove("valgt");
-        this.classList.add("valgt");
+        document.querySelector(".selected").classList.remove("selected");
+        this.classList.add("selected");
 
         visOller();
-        header.textContent = this.textContent;
+        //header.textContent = this.textContent;
       }
       const url = "https://olklubben-195d.restdb.io/rest/oloversigt";
       const options = {
