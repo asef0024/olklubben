@@ -9,9 +9,20 @@ body {
   background-image: url("billeder/splash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  filter: brightness(75%);
+}
+
+main {
+  padding-top: 40vw;
+  padding-bottom: 70vw;
+  padding-left: 3vw;
+}
+
+@media (min-width: 700px) {
+  main {
+    padding-top: 15vw;
+    padding-bottom: 22vw;
+    padding-left: 15vw;
+  }
 }
 
 /*-----------------------------------------------FORSIDE--------------------------------------------------------*/
@@ -67,7 +78,7 @@ a {
 
 @media (max-width: 700px) {
   #menu {
-    /* position: fixed; */
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -76,7 +87,7 @@ a {
     list-style-type: none;
     transition-duration: 0.7s;
     transform-origin: top left;
-    z-index: 5;
+
     text-align: center;
     font-size: 3rem;
     padding-top: 30vw;
@@ -139,7 +150,6 @@ a {
   font-size: 5rem;
   color: rgb(182, 133, 27);
   font-family: "Work Sans", sans-serif;
-  /* position: relative; */
   top: 7rem;
   left: 0.4rem;
   text-shadow: black 3px 3px 3px;
@@ -150,14 +160,12 @@ a {
   font-size: 1.5rem;
   color: white;
   font-family: "Work Sans", sans-serif;
-  /* position: relative; */
   top: 7rem;
-  left: 0.4rem;
+  left: 1rem;
 }
 
 @media (min-width: 600px) {
   .headline {
-    position: relative;
     left: 10vw;
     top: 5vw;
   }
@@ -191,10 +199,9 @@ footer a:visited {
   color: rgb(182, 133, 27);
 }
 
-/* 
 .footer_logo {
-  position: relative;
-  width: 6vw;
+  width: 10%;
+  height: auto;
 }
 
 .second_section {
@@ -301,4 +308,4 @@ footer a:visited {
     position: relative;
     left: -6vw;
   }
-} */
+}
