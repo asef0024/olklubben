@@ -31,7 +31,7 @@ a {
 }
 
 nav img {
-  width: 50%;
+  width: 30%;
   height: 100%;
   padding-left: 20px;
   z-index: 1;
@@ -64,7 +64,7 @@ nav {
   pointer-events: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #menu {
     position: fixed;
     top: 0px;
@@ -89,13 +89,16 @@ nav {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   #menuknap {
     display: none;
   }
 
   nav img {
     width: 15%;
+    height: 100%;
+    padding-left: 20px;
+    z-index: 1;
   }
 
   #menu.hidden {
@@ -132,9 +135,9 @@ nav {
   color: rgb(182, 133, 27);
   font-family: "Work Sans", sans-serif;
   position: relative;
-  left: 1rem;
   top: 7rem;
-  text-shadow: black 1px 1px 3px;
+  left: 0.4rem;
+  text-shadow: black 3px 3px 3px;
 }
 
 .headline p {
@@ -143,8 +146,16 @@ nav {
   color: white;
   font-family: "Work Sans", sans-serif;
   position: relative;
-  left: 1.4rem;
   top: 7rem;
+  left: 0.4rem;
+}
+
+@media (min-width: 600px) {
+  .headline {
+    position: relative;
+    left: 10vw;
+    top: 5vw;
+  }
 }
 
 .headline a:hover {
