@@ -3,6 +3,34 @@
   margin: 0;
 }
 
+/*-----------------------------------------------GLOBALE VARIABLER--------------------------------------------------------*/
+
+h1 {
+  color: rgb(182, 133, 27);
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  color: rgb(182, 133, 27);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-style: italic;
+  color: white;
+  font-family: "Opens Sans", sans-serif;
+}
+
+h3 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 450;
+  color: white;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
 body {
   overflow-x: hidden;
   background-color: black;
@@ -193,6 +221,10 @@ a {
   font-family: "Open Sans", sans-serif;
   top: 7rem;
   left: 1rem;
+}
+
+.headline_events {
+  gap: 5px;
 }
 
 /* -----------------------------------------------------------FOOTER------------------------------------------------------- */
