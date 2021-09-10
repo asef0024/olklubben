@@ -8,7 +8,7 @@ body {
 }
 
 .forside {
-  background-image: url("billeder/splash.jpg");
+  /* background-image: url("billeder/splash.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -161,4 +161,127 @@ nav {
 .headline a:hover {
   color: rgb(182, 133, 27);
   text-decoration: underline;
+}
+
+/* -----------------------------------------------------------FOOTER------------------------------------------------------- */
+
+footer {
+  background-color: rgb(138, 39, 39);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 2vw;
+  margin: 0 auto;
+  padding-left: 15vw;
+  font-size: 1rem;
+}
+
+.footer_logo {
+  position: relative;
+  width: 6vw;
+}
+
+.second_section {
+  position: relative;
+  left: -3vw;
+}
+
+.first_Section {
+  position: relative;
+  padding-left: 12vw;
+}
+
+.insta {
+  width: 4vw;
+  height: 4vw;
+}
+
+@media (max-width: 600px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .first_section {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .fourth_section {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .second_section {
+    position: relative;
+    padding-left: 3vw;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .third_section {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .footer_logo {
+    width: 6vw;
+    height: 6vw;
+    top: -1.5vw;
+  }
+
+  .insta {
+    position: relative;
+
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
+@media (max-width: 400px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.8rem;
+  }
+
+  ul {
+    position: relative;
+    font-size: 0.5rem;
+    gap: 20px;
+    padding: 1vw;
+    font-size: 0.8rem;
+  }
+  li {
+  }
+  .fisk {
+    padding-right: 3vw;
+  }
+
+  .first_section {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    left: -8vw;
+  }
+
+  .fourth_section {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    left: -6vw;
+  }
+
+  .second_section {
+    position: relative;
+    left: -10vw;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .third_section {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    left: -6vw;
+  }
 }
