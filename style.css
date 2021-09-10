@@ -182,6 +182,7 @@ footer {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 2vw;
   padding-bottom: 2vw;
   margin: 0 auto;
   padding-left: 7vw;
@@ -199,9 +200,17 @@ footer a:visited {
   color: rgb(182, 133, 27);
 }
 
+footer img {
+  width: 70%;
+}
+
+.insta {
+  width: 4vw;
+  height: 4vw;
+}
+
 .footer_logo {
-  width: 10%;
-  height: auto;
+  width: 20vw;
 }
 
 .second_section {
@@ -214,11 +223,6 @@ footer a:visited {
   padding-left: 12vw;
 }
 
-.insta {
-  width: 4vw;
-  height: 4vw;
-}
-
 @media (max-width: 600px) {
   footer {
     display: grid;
@@ -228,11 +232,13 @@ footer a:visited {
   .first_section {
     grid-column: 1;
     grid-row: 1;
+    padding-bottom: 3vw;
   }
 
   .fourth_section {
     grid-column: 2;
     grid-row: 1;
+    padding-bottom: 3vw;
   }
 
   .second_section {
@@ -247,17 +253,8 @@ footer a:visited {
     grid-row: 2;
   }
 
-  .footer_logo {
-    width: 6vw;
-    height: 6vw;
-    top: -1.5vw;
-  }
-
-  .insta {
-    position: relative;
-
-    width: 6vw;
-    height: 6vw;
+  footer img {
+    width: 100%;
   }
 }
 
@@ -275,8 +272,7 @@ footer a:visited {
     padding: 1vw;
     font-size: 0.8rem;
   }
-  li {
-  }
+
   .fisk {
     padding-right: 3vw;
   }
