@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    * {
+      margin: 3px;
+    }
+    img {
+      width: 10%;
+      height: auto;
+    }
+    .indhold {
+      display: flex;
+    }
+
+    #info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    /* lodret streg*/
+    .vl {
+      border-left: 3px solid green;
+      height: 100px;
+    }
+
+    .main {
+      margin-left: 5%;
+    }
+
+    /* øl type nav bar*/
+
+    .sidebar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .sidebar li a {
+      display: block;
+      width: 60px;
+      margin: 20px;
+    }
+  </style>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">FORSIDE</a></li>
+          <li><a href="oversigt.html">ØL</a></li>
+          <li><a href="klubben.html">KLUBBEN</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div>
+      <h2>ØL</h2>
+      <p></p>
+    </div>
+
+    <section class="indhold">
+      <nav class="sidebar">
+        <ul>
+          <li><a data-type="alle" class="valgt">Alle</a></li>
+          <li><a data-type="pilsner">Pilsner</a></li>
+          <li><a data-type="ipa">IPA</a></li>
+          <li><a data-type="porter">Porter</a></li>
+          <li><a data-type="juleol">Juleøl</a></li>
+        </ul>
+      </nav>
+
+      <section class="main">
+        <section id="json"></section>
+
+        <template>
+          <article id="info">
+            <img src="" alt="" />
+            <div>
+              <h3></h3>
+              <p class="anbefaling"></p>
+              <button id="mereInfo">Mere info</button>
+            </div>
+            <div class="vl"></div>
+            <div>
+              <p>ABV:</p>
+              <p class="procent"></p>
+              <p>Rating:</p>
+              <p class="rating"></p>
+            </div>
+          </article>
+        </template>
+      </section>
+    </section>
+
+    <section id="popup">
+      <article>
+        <img src="" alt="" />
+        <div>
+          <h3></h3>
+          <p class="style"></p>
+          <p class="land"></p>
+          <p class="udseende"></p>
+          <p class="duft"></p>
+          <p class="smag"></p>
+          <p class="procent"></p>
+          <p class="anbefaling"></p>
+          <p class="rating"></p>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+
+      let header = document.querySelector("#typer");
+      let oller;
+      let filter = "alle";
+
+      function start() {
+        const filterKnapper = document.querySelectorAll(".sidebar a");
+        filterKnapper.forEach((knap) =>
+          knap.addEventListener("click", filtrerOller)
+        );
+        hentData();
+      }
+
+      function filtrerOller() {
+        filter = this.dataset.type;
+        document.querySelector(".valgt").classList.remove("valgt");
+        this.classList.add("valgt");
+
+        visOller();
+        header.textContent = this.textContent;
+      }
+      const url = "https://olklubben-195d.restdb.io/rest/oloversigt";
+      const options = {
+        headers: {
+          "x-apikey": "6139e30043cedb6d1f97eee3",
+        },
+      };
+      async function hentData() {
+        const respons = await fetch(url, options);
+        oller = await respons.json();
+        visOller();
+        console.log(oller);
+      }
+
+      function visOller() {
+        const container = document.querySelector("#json");
+        const menu = document.querySelector("template");
+        container.textContent = "";
+        oller.forEach((ol) => {
+          if (filter == ol.type || filter == "alle") {
+            let klon = menu.cloneNode(true).content;
+
+            klon.querySelector("h3").textContent = ol.navn;
+            klon.querySelector(".anbefaling").textContent = ol.anbefaling;
+            klon.querySelector(".procent").textContent =
+              ol.alkoholprocent + "%";
+
+            klon.querySelector(".rating").textContent = ol.rating + "/10";
+            klon.querySelector("img").src = "./billeder/" + ol.billede;
+
+            klon
+              .querySelector("article #mereInfo")
+              .addEventListener("click", () => visOllen(ol));
+
+            container.appendChild(klon);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
