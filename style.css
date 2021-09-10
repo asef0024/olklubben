@@ -6,19 +6,15 @@
 body {
   overflow-x: hidden;
   background-color: black;
-}
-
-/*----------------------------------------FORSIDE--------------------------------------------------*/
-
-.forside {
   background-image: url("billeder/splash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   filter: brightness(75%);
-  position: fixed;
 }
+
+/*-----------------------------------------------FORSIDE--------------------------------------------------------*/
 
 nav img {
   width: 30%;
@@ -51,7 +47,7 @@ a {
   text-decoration: none;
 }
 
-/*---------------------------------------------------BURGER MENU--------------------------------------------*/
+/*---------------------------------------------------BURGER MENU---------------------------------------------------------*/
 
 .hidden {
   overflow: hidden;
@@ -71,7 +67,7 @@ a {
 
 @media (max-width: 700px) {
   #menu {
-    position: fixed;
+    /* position: fixed; */
     top: 0px;
     left: 0px;
     width: 100%;
@@ -94,7 +90,7 @@ a {
   }
 }
 
-/*--------------------------------------------------------DESKTOP MENU---------------------------------*/
+/*--------------------------------------------------------DESKTOP MENU-------------------------------------------------*/
 
 @media (min-width: 700px) {
   #menuknap {
@@ -143,7 +139,7 @@ a {
   font-size: 5rem;
   color: rgb(182, 133, 27);
   font-family: "Work Sans", sans-serif;
-  position: relative;
+  /* position: relative; */
   top: 7rem;
   left: 0.4rem;
   text-shadow: black 3px 3px 3px;
@@ -154,7 +150,7 @@ a {
   font-size: 1.5rem;
   color: white;
   font-family: "Work Sans", sans-serif;
-  position: relative;
+  /* position: relative; */
   top: 7rem;
   left: 0.4rem;
 }
@@ -175,17 +171,24 @@ a {
 /* -----------------------------------------------------------FOOTER------------------------------------------------------- */
 
 footer {
-  position: relative;
-  bottom: 0px;
-  font-family: "Work Sans", sans-serif;
-  color: white;
-  background-color: rgb(22, 20, 20);
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-bottom: 2vw;
   margin: 0 auto;
-  padding-left: 15vw;
+  padding-left: 7vw;
   font-size: 1rem;
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  background-color: rgb(22, 20, 20);
+}
+
+footer a {
+  color: rgb(182, 133, 27);
+}
+
+footer a:visited {
+  color: rgb(182, 133, 27);
 }
 
 /* 
