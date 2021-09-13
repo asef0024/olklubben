@@ -520,10 +520,11 @@ footer img {
 }
 
 .headline_bajer {
-  margin-left: 10px;
+  padding-top: 20vw;
+  padding-bottom: 10vw;
 }
 .headline_bajer h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(182, 133, 27);
   text-shadow: black 3px 3px 3px;
 }
@@ -533,8 +534,6 @@ footer img {
   font-size: 1.5rem;
   color: white;
   font-family: "Open Sans", sans-serif;
-  top: 7rem;
-  left: 1rem;
 }
 
 .headline_bajer {
@@ -545,6 +544,9 @@ footer img {
 }
 
 @media (min-width: 700px) {
+  .headline_bajer h2 {
+    font-size: 6rem;
+  }
   .produktContainer h3 {
     font-size: 3rem;
   }
@@ -570,4 +572,15 @@ footer img {
   width: 60px;
   margin: 20px;
   padding: 0.2rem;
+}
+
+@media (min-width: 700px) {
+  .sidebar li a {
+    display: block;
+    width: 80px;
+    margin: 30px;
+    padding: 0.4rem;
+    font-family: font-family: "Work Sans", sans-serif;
+    font-size: 1.3rem;
+  }
 }
