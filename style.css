@@ -110,6 +110,10 @@ nav {
   background: rgb(5, 5, 5);
 }
 
+nav ul {
+  right: 5vw;
+}
+
 #menu a:hover {
   color: rgb(182, 133, 27);
   text-decoration: underline;
@@ -175,7 +179,7 @@ a {
   }
 
   nav img {
-    width: 15%;
+    width: 30%;
     height: 100%;
     padding-left: 20px;
     z-index: 1;
@@ -189,7 +193,7 @@ a {
 
   #menu li {
     display: inline-block;
-    padding-right: 2rem;
+    padding-right: 1rem;
   }
 
   nav {
