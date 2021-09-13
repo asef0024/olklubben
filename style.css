@@ -23,7 +23,7 @@ h1 span {
 h2 {
   color: rgb(182, 133, 27);
   font-family: "Work Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 p {
@@ -329,14 +329,19 @@ a {
 }
 
 .event {
-  background-color: #0000009c;
+  background-color: #0000005e;
   margin-bottom: 5vw;
-  padding: 1vw;
+  padding-bottom: 10vw;
 }
 
 .event h3 {
   font-size: 2rem;
   padding-bottom: 1vw;
+  text-align: center;
+}
+
+.event .dato {
+ text-align: center;
 }
 
 .event .beskrivelse {
@@ -372,6 +377,7 @@ a {
     grid-template-rows: repeat(4, 1fr);
     margin-bottom: 2vw;
     gap: 2vw;
+    padding: 2vw;
   }
 
   .event img {
@@ -384,6 +390,7 @@ a {
     grid-row: 1/2;
     font-size: 3rem;
     padding-bottom: 0vw;
+    text-align: left;
   }
   .event .beskrivelse {
     grid-column: 3/5;
@@ -392,12 +399,14 @@ a {
     border-right: 1px solid white;
     padding-top: 0vw;
     padding-bottom: 0vw;
+    padding-right: 1vw;
     align-self: center;
   }
   .event .dato {
     grid-column: 5/6;
     grid-row: 2/4;
     align-self: center;
+    text-align: left;
   }
 }
 
