@@ -250,6 +250,7 @@ a {
 #om_os img {
   width: 80%;
   height: auto;
+  border-radius: 2%;
 }
 
 #om_os {
