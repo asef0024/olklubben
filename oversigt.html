@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ovetsigt</title>
+    <title>Oversigt</title>
 
     <link rel="stylesheet" href="style.css" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    />
-
   </head>
 <body>
 
@@ -45,13 +43,11 @@
       <h2>ØL OVERSIGT</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
     </div>
+
+
     <main class="main_bajer">
-
-
       <section id="json"></section>
 
-     
-    
       <template>
         <article id="info">
           <div class="produktContainer">
@@ -71,68 +67,7 @@
       </template>
 
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", start);
-
-      let header = document.querySelector("#typer");
-      let oller;
-      let filter = "alle";
-
-      function start() {
-        const filterKnapper = document.querySelectorAll(".sidebar a");
-        document.querySelector(".valgt").classList.add("selected");
-        filterKnapper.forEach((knap) =>
-          knap.addEventListener("click", filtrerOller)
-        );
-        hentData();
-      }
-
-      function filtrerOller() {
-        filter = this.dataset.type;
-        document.querySelector(".selected").classList.remove("selected");
-        this.classList.add("selected");
-
-        visOller();
-        //header.textContent = this.textContent;
-      }
-      const url = "https://olklubben-195d.restdb.io/rest/oloversigt";
-      const options = {
-        headers: {
-          "x-apikey": "6139e30043cedb6d1f97eee3",
-        },
-      };
-      async function hentData() {
-        const respons = await fetch(url, options);
-        oller = await respons.json();
-        visOller();
-        console.log(oller);
-      }
-
-      function visOller() {
-        const container = document.querySelector("#json");
-        const menu = document.querySelector("template");
-        container.textContent = "";
-        oller.forEach((ol) => {
-          if (filter == ol.type || filter == "alle") {
-            let klon = menu.cloneNode(true).content;
-
-            klon.querySelector("h3").textContent = ol.navn;
-            klon.querySelector(".anbefaling").textContent = ol.anbefaling;
-            klon.querySelector(".procent").textContent =
-              ol.alkoholprocent + "%";
-
-            klon.querySelector(".rating").textContent = ol.rating + "/10";
-            klon.querySelector("img").src = "./billeder/" + ol.billede;
-
-            klon
-              .querySelector("article #mereInfo")
-              .addEventListener("click", () => visOllen(ol));
-
-            container.appendChild(klon);
-          }
-        });
-      }
-    </script>
+   
       <footer>
       <div class="first_section">
         <div class="footer_logo">
