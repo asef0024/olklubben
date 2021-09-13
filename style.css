@@ -14,6 +14,7 @@ h1 {
 
 .øl_headline {
   color: rgb(230, 163, 20);
+  font-size: 7rem;
 }
 h1 span {
   color: white;
@@ -61,14 +62,6 @@ h3 {
 }
 /*------------------------------------------------------------------------------------*/
 
-body {
-  /* overflow-x: hidden;
-  background-color: black;
-  background-image: url("billeder/splash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
-}
-
 .background_image_container {
   overflow-x: hidden;
   background-color: black;
@@ -76,6 +69,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: 50%;
 }
 .headline {
   padding-top: 40vw;
@@ -85,12 +79,7 @@ body {
   margin-right: 5vw;
 }
 
-@media (min-width: 700px) {
-  main {
-    /* padding-top: 15vw;
-    padding-bottom: 22vw;
-    padding-left: 15vw; */
-  }
+@media (min-width: 768px) {
 }
 
 /*-----------------------------------------------FORSIDE--------------------------------------------------------*/
@@ -149,7 +138,7 @@ a {
   padding-right: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 699px) {
   #menu {
     position: fixed;
     top: 0px;
@@ -232,6 +221,7 @@ a {
   font-size: 1rem;
   color: white;
   font-family: "Opens Sans", sans-serif;
+  line-height: 1.6rem;
 }
 
 .headline a:hover {
