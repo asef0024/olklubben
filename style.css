@@ -33,13 +33,21 @@ h3 {
 /*------------------------------------------------------------------------------------*/
 
 body {
+  /* overflow-x: hidden;
+  background-color: black;
+  background-image: url("billeder/splash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.background_image_container {
   overflow-x: hidden;
   background-color: black;
   background-image: url("billeder/splash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 .headline {
   padding-top: 40vw;
   padding-bottom: 70vw;
@@ -50,9 +58,9 @@ body {
 
 @media (min-width: 700px) {
   main {
-    padding-top: 15vw;
+    /* padding-top: 15vw;
     padding-bottom: 22vw;
-    padding-left: 15vw;
+    padding-left: 15vw; */
   }
 }
 
@@ -75,6 +83,8 @@ nav {
   padding-bottom: 15px;
   z-index: 2;
   font-family: "Work Sans", sans-serif;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #menu a:hover {
