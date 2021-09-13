@@ -38,6 +38,10 @@ h3 {
   color: white;
 }
 
+.selected {
+  color: #e2a326;
+}
+
 .button {
   margin-top: 2rem;
   border: solid 2px rgb(182, 133, 27);
