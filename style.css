@@ -29,7 +29,7 @@ h3 {
   color: white;
 }
 
-/*---------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------*/
 
 body {
   overflow-x: hidden;
@@ -63,6 +63,7 @@ nav img {
 }
 
 nav {
+  color: white;
   overflow-x: hidden;
   display: flex;
   align-items: center;
@@ -160,6 +161,7 @@ a {
   }
 
   #menu {
+    color: white;
     overflow-x: hidden;
     padding-right: 20px;
     display: flex;
