@@ -30,6 +30,14 @@ h3 {
   color: white;
 }
 
+.button {
+  margin-top: 2rem;
+  border: solid 2px rgb(182, 133, 27);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
 /*------------------------------------------------------------------------------------*/
 
 body {
@@ -429,4 +437,10 @@ footer img {
     position: relative;
     left: -6vw;
   }
+}
+
+/* ------------------------------------------------ KLUB ----------------------------------------------------------- */
+
+.klubben_main {
+  height: auto;
 }
