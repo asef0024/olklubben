@@ -356,3 +356,83 @@ footer img {
     left: -6vw;
   }
 }
+/* -----------------------------------------------------------OVERSIGT------------------------------------------------------- */
+.sidebar {
+  display: flex;
+}
+#info {
+  display: grid;
+}
+
+.produktContainer img {
+  width: 30vw;
+  height: auto;
+}
+
+.produktInfo {
+  display: none;
+}
+
+.produktContainer {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+/* lodret streg*/
+.vl {
+  border-left: 3px solid green;
+  height: 100px;
+}
+
+.headline_bajer {
+  margin-left: 10px;
+}
+.headline_bajer h2 {
+  font-size: 2rem;
+  color: rgb(182, 133, 27);
+  text-shadow: black 3px 3px 3px;
+}
+
+.headline_bajer p {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  top: 7rem;
+  left: 1rem;
+}
+
+.headline_bajer {
+  gap: 5px;
+}
+.main_bajer {
+  margin-left: 35%;
+}
+
+@media (min-width: 700px) {
+  .produktContainer h3 {
+    font-size: 3rem;
+  }
+}
+
+/* ------------------------------------OVERSIGT øl type nav bar----------------------------*/
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 30vh;
+  z-index: 1;
+  width: auto;
+  overflow-x: hidden;
+  background-color: #24221d;
+  color: #fffdf3;
+}
+
+.sidebar li a {
+  display: block;
+  width: 60px;
+  margin: 20px;
+  padding: 0.2rem;
+}
