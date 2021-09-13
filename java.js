@@ -70,9 +70,9 @@ function visOller() {
       klon.querySelector(".rating").textContent = ol.rating + "/10";
       klon.querySelector("#info img").src = "./billeder/" + ol.billede;
 
-      klon
+      /* klon
         .querySelector("article #mereInfo")
-        .addEventListener("click", () => visOllen(ol));
+        .addEventListener("click", () => visOllen(ol)); */
 
       container.appendChild(klon);
     }
