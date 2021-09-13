@@ -12,6 +12,10 @@ h1 {
   font-size: 3rem;
 }
 
+h1 span {
+  color: white;
+}
+
 h2 {
   color: rgb(182, 133, 27);
   font-family: "Work Sans", sans-serif;
@@ -85,6 +89,7 @@ nav {
   color: white;
   overflow-x: hidden;
   display: flex;
+  padding-right: 2vw;
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
@@ -227,7 +232,7 @@ a {
 /*-----------------------------------------------------------Klubben---------------------------------------*/
 
 #om_os h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: rgb(255, 255, 255);
   font-family: "Work Sans", sans-serif;
   text-shadow: black 3px 3px 3px;
@@ -238,7 +243,9 @@ a {
 }
 
 #om_os p {
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
   font-weight: normal;
   font-style: normal;
   font-size: 1.2rem;
@@ -263,6 +270,10 @@ a {
     max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+
+  #om_os h2 {
+    font-size: 5rem;
   }
 
   .headline_klubben {
@@ -429,7 +440,6 @@ footer img {
 
   .second_section {
     position: relative;
-    padding-left: 3vw;
     grid-column: 1;
     grid-row: 2;
   }
