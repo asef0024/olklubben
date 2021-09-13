@@ -62,17 +62,17 @@ function visOller() {
     if (filter == ol.type || filter == "alle") {
       let klon = menu.cloneNode(true).content;
 
-      klon.querySelector("h3").textContent = ol.navn;
+      klon.querySelector("#info h3").textContent = ol.navn;
       klon.querySelector(".anbefaling").textContent = ol.anbefaling;
       klon.querySelector(".procent").textContent =
         ol.alkoholprocent + "%";
 
       klon.querySelector(".rating").textContent = ol.rating + "/10";
-      klon.querySelector("img").src = "./billeder/" + ol.billede;
+      klon.querySelector("#info img").src = "./billeder/" + ol.billede;
 
-      klon
+      /* klon
         .querySelector("article #mereInfo")
-        .addEventListener("click", () => visOllen(ol));
+        .addEventListener("click", () => visOllen(ol)); */
 
       container.appendChild(klon);
     }

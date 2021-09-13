@@ -545,35 +545,52 @@ footer img {
   }
 }
 /* -----------------------------------------------------------OVERSIGT------------------------------------------------------- */
-.sidebar {
-  display: flex;
-}
-#info {
-  display: grid;
-}
 
-.produktContainer img {
+/* #info {
+  margin-bottom: 30px;
+} */
+
+#info img {
   width: 30vw;
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.produktInfo,
+#info h3 {
+  margin-top: 3vh;
+  margin-bottom: 15vh;
+  margin-left: 30%;
+}
+
+.rating {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.anbefaling,
+.mereInfo,
+.rating,
+.rating_p,
 .popInfo {
   display: none;
 }
 
-.produktContainer {
+/* .produktContainer {
   position: relative;
   text-align: center;
   padding: 20px;
-}
+} */
 
 .headline_bajer {
   padding-top: 20vw;
   padding-bottom: 10vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 .headline_bajer h2 {
-  font-size: 3rem;
+  font-size: 5rem;
   color: rgb(182, 133, 27);
   text-shadow: black 3px 3px 3px;
 }
@@ -588,22 +605,17 @@ footer img {
 .headline_bajer {
   gap: 5px;
 }
-.main_bajer {
-  margin-left: 35%;
-}
 
 @media (min-width: 768px) {
+  .main_bajer {
+    margin-left: 20vw;
+    margin-right: 5vw;
+  }
+
   .headline_bajer h2 {
     font-size: 6rem;
   }
-  .produktContainer h3 {
-    font-size: 3rem;
-  }
-  .main_bajer #info {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 8vw;
-  }
+
   .headline_bajer {
     padding-top: 10vw;
     padding-bottom: 5vw;
@@ -613,40 +625,76 @@ footer img {
     padding-top: 0vw;
   }
 
-  #info .produktContainer img {
-    width: 20%;
-    padding-top: 0vw;
-    padding-bottom: 0vw;
+  .main_bajer #info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 8vw;
+  }
+
+  .anbefaling,
+  .mereInfo,
+  .rating_p,
+  .rating {
+    display: inline;
   }
 
   #info {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     margin-bottom: 2vw;
     gap: 2vw;
   }
 
-  #info .produktContainer img {
-    grid-column: 1/3;
-    grid-row: 1/5;
+  #info img {
+    width: 15vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: end;
   }
 
-  #info .produktContainer h3 {
-    grid-column: 3/5;
+  #info h3 {
+    grid-column: 2/3;
     grid-row: 1/2;
-    font-size: 3rem;
-    padding-bottom: 0vw;
+    font-size: 2.5rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    align-self: end;
   }
-  #info .produktInfo {
+  .anbefaling {
+    grid-column: 2/5;
+    grid-row: 2/2;
+    font-size: 1.3rem;
+    align-self: end;
+    margin-right: 2vw;
+    font-style: normal;
+  }
+  .rating_p {
+    grid-column: 5;
+    grid-row: 1/1;
+    margin-left: 5px;
+  }
+  .rating {
+    grid-column: 5;
+    grid-row: 2/2;
+    align-self: top;
+    margin-left: 5px;
+  }
+  #info .mereInfo {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+
+  /*   #info {
     grid-column: 3/5;
     grid-row: 2/4;
     border-bottom: 0px;
-    border-right: 1px solid white;
     padding-top: 0vw;
     padding-bottom: 0vw;
     align-self: center;
-  }
+  } */
   .event .dato {
     grid-column: 5/6;
     grid-row: 2/4;
@@ -654,8 +702,64 @@ footer img {
   }
 }
 
-/* ------------------------------------OVERSIGT øl type nav bar----------------------------*/
+@media (min-width: 1025px) {
+  #info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 2vw;
+    gap: 2vw;
+  }
 
+  #info img {
+    width: 8vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: end;
+  }
+
+  #info h3 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 3rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    align-self: end;
+  }
+  .anbefaling {
+    grid-column: 2/4;
+    grid-row: 2/2;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    align-self: end;
+    margin-right: 2vw;
+  }
+  .rating_p {
+    grid-column: 5;
+    grid-row: 1/1;
+    margin-left: 5px;
+    font-size: 1.2rem;
+    align-self: end;
+  }
+  .rating {
+    grid-column: 5;
+    grid-row: 2/2;
+    align-self: top;
+    margin-left: 5px;
+    font-size: 1.6rem;
+  }
+  #info .mereInfo {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+}
+
+/* ------------------------------------OVERSIGT øl type nav bar----------------------------*/
+.sidebar {
+  display: flex;
+}
 .sidebar ul {
   list-style-type: none;
   margin: 0;
@@ -671,7 +775,7 @@ footer img {
 
 .sidebar li a {
   display: block;
-  width: 60px;
+  width: 40px;
   margin: 20px;
   padding: 0.2rem;
 }
@@ -684,5 +788,11 @@ footer img {
     padding: 0.4rem;
     font-family: "Work Sans", sans-serif;
     font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .sidebar ul {
+    top: 50vh;
   }
 }
