@@ -6,16 +6,24 @@
 /*-----------------------------------------------GLOBALE VARIABLER--------------------------------------------------------*/
 
 h1 {
-  color: rgb(182, 133, 27);
+  color: white;
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
   font-size: 3rem;
 }
 
+.øl_headline {
+  color: rgb(230, 163, 20);
+  font-size: 7rem;
+}
+h1 span {
+  color: white;
+}
+
 h2 {
   color: rgb(182, 133, 27);
   font-family: "Work Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 p {
@@ -33,20 +41,26 @@ h3 {
 .button {
   margin-top: 2rem;
   border: solid 2px rgb(182, 133, 27);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   padding-right: 3rem;
   padding-left: 3rem;
+  margin-top: 3rem;
+  margin-right: 0.5rem;
+}
+
+.headline p {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 60ch;
+}
+
+.headline a {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 450;
+  color: white;
 }
 /*------------------------------------------------------------------------------------*/
-
-body {
-  /* overflow-x: hidden;
-  background-color: black;
-  background-image: url("billeder/splash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
-}
 
 .background_image_container {
   overflow-x: hidden;
@@ -55,21 +69,17 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: 50%;
 }
 .headline {
   padding-top: 40vw;
   padding-bottom: 70vw;
   padding-left: 3vw;
-  margin-left: 7vw;
-  margin-right: 7vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
-@media (min-width: 700px) {
-  main {
-    /* padding-top: 15vw;
-    padding-bottom: 22vw;
-    padding-left: 15vw; */
-  }
+@media (min-width: 768px) {
 }
 
 /*-----------------------------------------------FORSIDE--------------------------------------------------------*/
@@ -85,6 +95,7 @@ nav {
   color: white;
   overflow-x: hidden;
   display: flex;
+  padding-right: 2vw;
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
@@ -127,7 +138,7 @@ a {
   padding-right: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 699px) {
   #menu {
     position: fixed;
     top: 0px;
@@ -210,6 +221,7 @@ a {
   font-size: 1rem;
   color: white;
   font-family: "Opens Sans", sans-serif;
+  line-height: 1.6rem;
 }
 
 .headline a:hover {
@@ -227,7 +239,7 @@ a {
 /*-----------------------------------------------------------Klubben---------------------------------------*/
 
 #om_os h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: rgb(255, 255, 255);
   font-family: "Work Sans", sans-serif;
   text-shadow: black 3px 3px 3px;
@@ -238,7 +250,9 @@ a {
 }
 
 #om_os p {
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
   font-weight: normal;
   font-style: normal;
   font-size: 1.2rem;
@@ -248,7 +262,7 @@ a {
 }
 
 #om_os img {
-  width: 80%;
+  width: 76%;
   height: auto;
   border-radius: 2%;
 }
@@ -263,6 +277,10 @@ a {
     max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+
+  #om_os h2 {
+    font-size: 5rem;
   }
 
   .headline_klubben {
@@ -311,14 +329,19 @@ a {
 }
 
 .event {
-  background-color: #0000009c;
+  background-color: #0000005e;
   margin-bottom: 5vw;
-  padding: 1vw;
+  padding-bottom: 10vw;
 }
 
 .event h3 {
   font-size: 2rem;
   padding-bottom: 1vw;
+  text-align: center;
+}
+
+.event .dato {
+ text-align: center;
 }
 
 .event .beskrivelse {
@@ -354,6 +377,7 @@ a {
     grid-template-rows: repeat(4, 1fr);
     margin-bottom: 2vw;
     gap: 2vw;
+    padding: 2vw;
   }
 
   .event img {
@@ -366,6 +390,7 @@ a {
     grid-row: 1/2;
     font-size: 3rem;
     padding-bottom: 0vw;
+    text-align: left;
   }
   .event .beskrivelse {
     grid-column: 3/5;
@@ -374,12 +399,14 @@ a {
     border-right: 1px solid white;
     padding-top: 0vw;
     padding-bottom: 0vw;
+    padding-right: 1vw;
     align-self: center;
   }
   .event .dato {
     grid-column: 5/6;
     grid-row: 2/4;
     align-self: center;
+    text-align: left;
   }
 }
 
@@ -449,7 +476,6 @@ footer img {
 
   .second_section {
     position: relative;
-    padding-left: 3vw;
     grid-column: 1;
     grid-row: 2;
   }
