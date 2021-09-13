@@ -9,6 +9,7 @@ h1 {
   color: rgb(182, 133, 27);
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
+  font-size: 3rem;
 }
 
 h2 {
@@ -39,10 +40,12 @@ body {
   background-repeat: no-repeat;
 }
 
-main {
+.headline {
   padding-top: 40vw;
   padding-bottom: 70vw;
   padding-left: 3vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
 @media (min-width: 700px) {
@@ -85,6 +88,7 @@ a:visited {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 /*---------------------------------------------------BURGER MENU---------------------------------------------------------*/
@@ -172,26 +176,23 @@ a {
     font-family: "Work Sans", sans-serif;
     z-index: 2;
   }
+
+  /*-----------------------------------------------------------FORSIDE OVERSKRIFTER---------------------------------------*/
+
+  .headline h1 {
+    font-size: 5rem;
+    color: rgb(182, 133, 27);
+    font-family: "Work Sans", sans-serif;
+    top: 7rem;
+    left: 0.4rem;
+    text-shadow: black 3px 3px 3px;
+  }
 }
-
-/*-----------------------------------------------------------FORSIDE OVERSKRIFTER---------------------------------------*/
-
-.headline h1 {
-  font-size: 5rem;
-  color: rgb(182, 133, 27);
-  font-family: "Work Sans", sans-serif;
-  top: 7rem;
-  left: 0.4rem;
-  text-shadow: black 3px 3px 3px;
-}
-
 .headline p {
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
   font-family: "Opens Sans", sans-serif;
-  top: 7rem;
-  left: 1rem;
 }
 
 .headline a:hover {
