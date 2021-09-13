@@ -110,10 +110,6 @@ nav {
   background: rgb(5, 5, 5);
 }
 
-nav ul {
-  right: 5vw;
-}
-
 #menu a:hover {
   color: rgb(182, 133, 27);
   text-decoration: underline;
