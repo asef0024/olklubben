@@ -758,6 +758,10 @@ footer img {
     grid-row: 2;
     align-self: center;
     margin-left: 5px;
+    border-left: 2px solid white;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   #info .button {
     text-align: center;
@@ -814,7 +818,6 @@ footer img {
     line-height: 1.6;
     align-self: center;
     margin-right: 2vw;
-    border-right: 1px solid white;
     padding-right: 2vw;
   }
   /*   .rating_p {
