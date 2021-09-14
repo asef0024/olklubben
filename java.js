@@ -88,7 +88,7 @@ function visOller() {
     popUp.querySelector(".rating_popUp").textContent = ol.rating + "/10";
 
     document
-      .querySelector("#luk")
+      .querySelector("#luk_knap")
       .addEventListener("click", () => (popUp.style.display = "none"));
   }
 }
