@@ -758,6 +758,7 @@ footer img {
     margin-left: 5px;
   }
   #info .button {
+    text-align: center;
     grid-column: 3/4;
     grid-row: 4/5;
   }
