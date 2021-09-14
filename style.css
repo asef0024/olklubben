@@ -23,6 +23,7 @@ h1 span {
 
 h2 {
   color: white;
+  font-size: 4rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 800;
 }
@@ -33,6 +34,10 @@ h2 span {
 
 p {
   color: white;
+  font-family: "Opens Sans", sans-serif;
+}
+
+a {
   font-family: "Opens Sans", sans-serif;
 }
 
@@ -240,7 +245,7 @@ a {
   .headline .øl_headline {
     color: #e2a326;
     font-family: "Work Sans", sans-serif;
-    top: 7rem;
+    padding-top: 4rem;
     left: 0.4rem;
   }
 
@@ -300,24 +305,26 @@ a {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 15px;
-  font-weight: normal;
-  font-style: normal;
   font-size: 1.2rem;
   color: white;
-  font-family: "Opens Sans", sans-serif;
   line-height: 1.8rem;
 }
 
 #om_os img {
-  width: 76%;
+  width: 100%;
   height: auto;
-  border-radius: 2%;
+}
+
+.klubben_img {
+  text-align: center;
 }
 
 #om_os {
   margin: 0 auto;
-  padding: 15vw;
-  padding-top: 125px;
+  padding-top: 20vw;
+  padding-bottom: 10vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 @media (min-width: 700px) {
@@ -325,6 +332,12 @@ a {
     max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    padding-top: 10vw;
+  }
+
+  #om_os img {
+    width: 76%;
+    height: auto;
   }
 
   #om_os h2 {
@@ -347,14 +360,19 @@ a {
 }
 
 /*-----------------------------------------------------------EVENTS---------------------------------------*/
-.headline_events h2 {
-  font-size: 5rem;
-}
 
 .headline_events p {
-  font-size: 1.2rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  font-size: 1rem;
   font-family: "Open Sans", sans-serif;
   padding-top: 5vw;
+  line-height: 1.8rem;
+}
+
+.headline_events h2 {
+  overflow-wrap: break-word;
 }
 
 .headline_events {
@@ -363,11 +381,14 @@ a {
 }
 
 #main_events {
-  max-width: 1100px;
   padding-top: 0;
   padding-left: 3vw;
   padding-right: 3vw;
-  padding-bottom: 20vw;
+  padding-bottom: 10vw;
+}
+
+#main_events p {
+  font-size: 1.2rem;
 }
 
 #events img {
@@ -385,23 +406,27 @@ a {
   font-size: 2rem;
   padding-bottom: 1vw;
   text-align: center;
+  color: #e2a326;
+  font-weight: bold;
 }
 
 .event .dato {
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .event .beskrivelse {
-  /* border-bottom: 1px solid white; */
   padding-top: 2vw;
   padding-bottom: 5vw;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
   #main_events {
     max-width: 1100px;
     margin: 0 auto;
-    padding-bottom: 8vw;
+    padding-bottom: 5vw;
   }
   .headline_events {
     padding-top: 10vw;
@@ -435,10 +460,11 @@ a {
   .event h3 {
     grid-column: 3/5;
     grid-row: 1/2;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-bottom: 0vw;
     text-align: left;
   }
+
   .event .beskrivelse {
     grid-column: 3/5;
     grid-row: 2/4;
@@ -612,8 +638,7 @@ footer img {
 
 .anbefaling,
 #info .button,
-.rating,
-.rating_p,
+.rating_text,
 .popInfo {
   display: none;
 }
@@ -625,19 +650,17 @@ footer img {
 } */
 
 .headline_bajer {
+  max-width: 1100px;
   padding-top: 20vw;
   padding-bottom: 10vw;
   padding-left: 3vw;
   padding-right: 3vw;
 }
 .headline_bajer h2 {
-  font-size: 5rem;
-  color: rgb(182, 133, 27);
   text-shadow: black 3px 3px 3px;
 }
 
 .headline_bajer p {
-  font-style: italic;
   font-size: 1.5rem;
   color: white;
   font-family: "Open Sans", sans-serif;
@@ -649,12 +672,12 @@ footer img {
 
 @media (min-width: 768px) {
   .main_bajer {
-    margin-left: 20vw;
-    margin-right: 5vw;
+    margin: 0 auto;
+    max-width: 1100px;
   }
 
   .headline_bajer h2 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .headline_bajer {
@@ -664,18 +687,18 @@ footer img {
 
   .headline_bajer p {
     padding-top: 0vw;
+    font-size: 1.2rem;
   }
 
   .main_bajer #info {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-bottom: 8vw;
   }
 
   .anbefaling,
   #info .button,
-  .rating_p,
-  .rating {
+  .rating_text {
     display: inline;
   }
 
@@ -707,7 +730,7 @@ footer img {
   .anbefaling {
     grid-column: 2/5;
     grid-row: 2/2;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     align-self: end;
     margin-right: 2vw;
     font-style: normal;
@@ -737,6 +760,7 @@ footer img {
     padding-bottom: 0vw;
     align-self: center;
   } */
+
   .event .dato {
     grid-column: 5/6;
     grid-row: 2/4;
@@ -858,7 +882,7 @@ footer img {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 30vh;
+  top: 50vh;
   z-index: 1;
   width: auto;
   overflow-x: hidden;
@@ -867,6 +891,7 @@ footer img {
 }
 
 .sidebar li a {
+  cursor: pointer;
   display: block;
   width: 40px;
   margin: 20px;
@@ -886,6 +911,6 @@ footer img {
 
 @media (min-width: 1025px) {
   .sidebar ul {
-    top: 50vh;
+    top: 35vh;
   }
 }
