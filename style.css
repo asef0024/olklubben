@@ -642,6 +642,7 @@ footer img {
   font-style: normal;
 }
 
+/* skjul al info undtaget billede + h3 */
 .anbefaling,
 #info .button,
 .rating_text,
@@ -685,6 +686,8 @@ footer img {
   gap: 5px;
 }
 
+/* ipad */
+
 @media (min-width: 768px) {
   .main_bajer {
     margin: 0 auto;
@@ -711,6 +714,7 @@ footer img {
   .rating_text {
     display: inline;
   }
+  /* info sektionen i grid */
 
   #info {
     display: grid;
@@ -758,6 +762,7 @@ footer img {
     grid-row: 2;
     align-self: center;
     margin-left: 5px;
+    /*  lav en streg der adskiller rating fra resten */
     border-left: 2px solid white;
     padding-left: 2rem;
     padding-top: 3rem;
@@ -778,6 +783,7 @@ footer img {
     align-self: center;
   } */
 
+  /* hvorfor er denne her, sune? */
   .event .dato {
     grid-column: 5/6;
     grid-row: 2/4;
@@ -785,6 +791,7 @@ footer img {
   }
 }
 
+/* web */
 @media (min-width: 1025px) {
   #info {
     padding: 0vw;
