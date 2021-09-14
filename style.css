@@ -22,9 +22,13 @@ h1 span {
 }
 
 h2 {
-  color: rgb(182, 133, 27);
+  color: white;
   font-family: "Work Sans", sans-serif;
   font-weight: 800;
+}
+
+h2 span {
+  color: rgb(182, 133, 27);
 }
 
 p {
@@ -287,13 +291,9 @@ a {
 
 #om_os h2 {
   font-size: 4rem;
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: "Work Sans", sans-serif;
   text-shadow: black 3px 3px 3px;
-}
-
-#om_os h2 span {
-  color: rgb(182, 133, 27);
 }
 
 #om_os p {
@@ -349,12 +349,10 @@ a {
 /*-----------------------------------------------------------EVENTS---------------------------------------*/
 .headline_events h2 {
   font-size: 5rem;
-  color: rgb(182, 133, 27);
 }
 
 .headline_events p {
-  font-size: 1.5rem;
-  color: white;
+  font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
   padding-top: 5vw;
 }
@@ -394,6 +392,7 @@ a {
 }
 
 .event .beskrivelse {
+  /* border-bottom: 1px solid white; */
   padding-top: 2vw;
   padding-bottom: 5vw;
 }
@@ -425,6 +424,7 @@ a {
     grid-template-rows: repeat(4, 1fr);
     margin-bottom: 2vw;
     gap: 2vw;
+    /* padding: 2vw; */
   }
 
   .event img {
