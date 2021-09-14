@@ -716,6 +716,7 @@ footer img {
   .rating_p {
     grid-column: 5;
     grid-row: 1/1;
+    align-self: end;
     margin-left: 5px;
   }
   .rating {
