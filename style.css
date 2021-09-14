@@ -29,7 +29,7 @@ h2 {
 }
 
 h2 span {
-  color: rgb(182, 133, 27);
+  color: rgb(230, 163, 20);
 }
 
 p {
@@ -48,12 +48,12 @@ h3 {
 }
 
 .selected {
-  color: #e2a326;
+  color: rgb(230, 163, 20);
 }
 
 .button {
   margin-top: 2rem;
-  border: solid 2px #e2a326;
+  border: solid 2px rgb(230, 163, 20);
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   padding-right: 3rem;
@@ -63,7 +63,7 @@ h3 {
 }
 
 .button:hover {
-  background-color: #e2a326;
+  background-color: rgb(230, 163, 20);
 }
 
 .headline p {
@@ -142,7 +142,7 @@ nav {
 }
 
 #menu a:hover {
-  color: rgb(182, 133, 27);
+  color: rgb(230, 163, 20);
 }
 
 a:visited {
@@ -157,7 +157,7 @@ a {
 /*---------------------------------------------------BURGER MENU---------------------------------------------------------*/
 
 .hidden {
-  overflow: hidden;
+  /* overflow: hidden; */
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
@@ -230,7 +230,7 @@ a {
 
   #menu {
     color: white;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -444,14 +444,13 @@ a {
     padding-top: 0vw;
     padding-bottom: 0vw;
   }
-
+  /* Styling af alle articles med samme classes, blot med numre til forskel. */
   .event {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     margin-bottom: 2vw;
     gap: 2vw;
-    /* padding: 2vw; */
   }
 
   .event img {
@@ -481,11 +480,13 @@ a {
     grid-row: 2/4;
     align-self: center;
     text-align: left;
+
+    /* Styling af streg til opdeling af articles */
     padding-left: 2vw;
     padding-right: 2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    border-left: 1px solid white;
+    border-left: 2px solid white;
   }
 }
 
@@ -506,11 +507,11 @@ footer {
 }
 
 footer a {
-  color: rgb(182, 133, 27);
+  color: rgb(230, 163, 20);
 }
 
 footer a:visited {
-  color: rgb(182, 133, 27);
+  color: rgb(230, 163, 20);
 }
 
 footer img {
@@ -642,6 +643,7 @@ footer img {
   font-style: normal;
 }
 
+/* skjul al info undtaget billede + h3 */
 .anbefaling,
 #info .button,
 .rating_text,
@@ -679,11 +681,14 @@ footer img {
 
 #info {
   padding-bottom: 20vw;
+  padding-left: 15vw;
 }
 
 .headline_bajer {
   gap: 5px;
 }
+
+/* ipad */
 
 @media (min-width: 768px) {
   .main_bajer {
@@ -711,33 +716,37 @@ footer img {
   .rating_text {
     display: inline;
   }
+  /* info sektionen i grid */
 
   #info {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 0.5fr auto;
+    padding-bottom: 10vw;
     gap: 2vw;
     max-width: 1100px;
     margin: 0 auto;
-    padding-bottom: 2vw;
+    padding-left: 10vw;
+    padding-right: 2vw;
   }
 
   #info img {
-    width: 15vw;
+    width: 20vw;
     padding-top: 0vw;
     padding-bottom: 0vw;
     grid-column: 1/2;
-    grid-row: 1/3;
-    align-self: end;
+    grid-row: 1/4;
+    align-self: center;
   }
 
   #info h3 {
-    grid-column: 2/3;
+    grid-column: 2/6;
     grid-row: 1/2;
     font-size: 2.5rem;
     margin-left: 0;
     margin-bottom: 0;
     align-self: end;
+    text-align: left;
   }
   .anbefaling {
     grid-column: 2/5;
@@ -747,6 +756,7 @@ footer img {
     margin-right: 2vw;
     font-style: normal;
   }
+
   /* .rating_p {
     grid-column: 5;
     grid-row: 1/1;
@@ -758,6 +768,7 @@ footer img {
     grid-row: 2;
     align-self: center;
     margin-left: 5px;
+    /*  lav en streg der adskiller rating fra resten */
     border-left: 2px solid white;
     padding-left: 2rem;
     padding-top: 3rem;
@@ -765,8 +776,12 @@ footer img {
   }
   #info .button {
     text-align: center;
-    grid-column: 3/4;
-    grid-row: 4/5;
+    margin: 0;
+    margin-right: 9vw;
+
+    grid-column: 2/4;
+    grid-row: 3/4;
+    align-self: start;
   }
 
   /*   #info {
@@ -778,6 +793,7 @@ footer img {
     align-self: center;
   } */
 
+  /* hvorfor er denne her, sune? */
   .event .dato {
     grid-column: 5/6;
     grid-row: 2/4;
@@ -785,25 +801,27 @@ footer img {
   }
 }
 
+/* web */
 @media (min-width: 1025px) {
   #info {
     padding: 0vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 0.5fr auto;
+    padding-bottom: 8vw;
   }
 
   #info img {
-    width: 10vw;
+    width: 12vw;
     padding-top: 0vw;
     padding-bottom: 0vw;
     grid-column: 1/2;
-    grid-row: 2;
+    grid-row: 1/4;
     align-self: center;
   }
 
   #info h3 {
-    color: rgb(182, 133, 27);
+    color: rgb(230, 163, 20);
     grid-column: 2 / span 3;
     grid-row: 1;
     font-size: 3rem;
@@ -835,8 +853,13 @@ footer img {
     font-size: 1.6rem;
   }
   #info .button {
-    grid-column: 3/4;
-    grid-row: 4/5;
+    text-align: center;
+    margin: 0;
+    margin-right: 12vw;
+
+    grid-column: 2/4;
+    grid-row: 3/4;
+    align-self: start;
   }
 }
 
