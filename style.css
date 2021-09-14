@@ -379,7 +379,6 @@ a {
 }
 
 .event {
-  background-color: #0000005e;
   margin-bottom: 5vw;
   padding-bottom: 10vw;
 }
@@ -395,7 +394,6 @@ a {
 }
 
 .event .beskrivelse {
-  /* border-bottom: 1px solid white; */
   padding-top: 2vw;
   padding-bottom: 5vw;
 }
@@ -427,7 +425,6 @@ a {
     grid-template-rows: repeat(4, 1fr);
     margin-bottom: 2vw;
     gap: 2vw;
-    /* padding: 2vw; */
   }
 
   .event img {
