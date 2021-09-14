@@ -611,7 +611,7 @@ footer img {
 }
 
 .anbefaling,
-.mereInfo,
+#info .button,
 .rating,
 .rating_p,
 .popInfo {
@@ -673,7 +673,7 @@ footer img {
   }
 
   .anbefaling,
-  .mereInfo,
+  #info .button,
   .rating_p,
   .rating {
     display: inline;
