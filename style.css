@@ -133,6 +133,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
+  width: 100vw;
 
   z-index: 2;
   font-family: "Work Sans", sans-serif;
