@@ -80,15 +80,18 @@ function visOller() {
   function visPopUpOversigt(ol) {
     const popUp = document.querySelector("#popUp");
     popUp.style.display = "block";
-
+    document.querySelector(".sidebar").classList.add("skjulSideBar");
     popUp.querySelector("img").src = "./billeder/" + ol.billede;
     popUp.querySelector(".navn_popUp").textContent = ol.navn;
     popUp.querySelector(".duft_tekst_popUp").textContent = ol.duft;
     popUp.querySelector(".smagBeskrivelse_popUp").textContent = ol.smag;
     popUp.querySelector(".rating_popUp").textContent = ol.rating + "/10";
 
-    document
-      .querySelector("#luk_knap")
-      .addEventListener("click", () => (popUp.style.display = "none"));
+    document.querySelector("#luk_knap").addEventListener("click", skjulmenu);
+
+    function skjulmenu() {
+      popUp.style.display = "none";
+      document.querySelector(".sidebar").classList.remove("skjulSideBar");
+    }
   }
 }
