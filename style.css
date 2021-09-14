@@ -15,6 +15,7 @@ h1 {
 .øl_headline {
   color: rgb(230, 163, 20);
   font-size: 7rem;
+  margin-bottom: -4vw;
 }
 h1 span {
   color: white;
@@ -27,7 +28,6 @@ h2 {
 }
 
 p {
-  font-style: italic;
   color: white;
   font-family: "Opens Sans", sans-serif;
 }
@@ -44,13 +44,17 @@ h3 {
 
 .button {
   margin-top: 2rem;
-  border: solid 2px rgb(182, 133, 27);
+  border: solid 2px #e2a326;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   padding-right: 3rem;
   padding-left: 3rem;
   margin-top: 3rem;
   margin-right: 0.5rem;
+}
+
+.button:hover {
+  background-color: #e2a326;
 }
 
 .headline p {
@@ -76,14 +80,30 @@ h3 {
   background-position: 50%;
 }
 .headline {
-  padding-top: 40vw;
-  padding-bottom: 70vw;
+  padding-top: 20vw;
+  padding-bottom: 30vw;
   padding-left: 3vw;
   margin-left: 5vw;
   margin-right: 5vw;
 }
 
-@media (min-width: 768px) {
+.headline p {
+  font-size: 1rem;
+  color: white;
+  font-family: "Opens Sans", sans-serif;
+  line-height: 1.6rem;
+}
+
+.headline a:hover {
+}
+@media (min-width: 668px) {
+  .headline {
+    padding-top: 15vw;
+    padding-bottom: 20vw;
+    padding-left: 3vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }
 
 /*-----------------------------------------------FORSIDE--------------------------------------------------------*/
@@ -103,7 +123,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
-  padding-bottom: 15px;
+
   z-index: 2;
   font-family: "Work Sans", sans-serif;
   position: fixed;
@@ -112,7 +132,6 @@ nav {
 
 #menu a:hover {
   color: rgb(182, 133, 27);
-  text-decoration: underline;
 }
 
 a:visited {
@@ -169,13 +188,13 @@ a {
 
 /*--------------------------------------------------------DESKTOP MENU-------------------------------------------------*/
 
-@media (min-width: 700px) {
+@media (min-width: 721px) {
   #menuknap {
     display: none;
   }
 
   nav img {
-    width: 30%;
+    width: 20%;
     height: 100%;
     padding-left: 20px;
     z-index: 1;
@@ -214,26 +233,47 @@ a {
 
   /*-----------------------------------------------------------FORSIDE OVERSKRIFTER---------------------------------------*/
 
-  .headline h1 {
-    font-size: 5rem;
-    color: rgb(182, 133, 27);
+  .headline .øl_headline {
+    color: #e2a326;
     font-family: "Work Sans", sans-serif;
     top: 7rem;
     left: 0.4rem;
-    text-shadow: black 3px 3px 3px;
+  }
+
+  .headline h1 {
+    font-size: 6rem;
   }
 }
-.headline p {
-  font-style: italic;
-  font-size: 1rem;
-  color: white;
-  font-family: "Opens Sans", sans-serif;
-  line-height: 1.6rem;
-}
 
-.headline a:hover {
-  color: rgb(182, 133, 27);
-  text-decoration: underline;
+@media (min-width: 721px) {
+  #main_forside {
+    margin-left: 3vw;
+  }
+
+  .headline .øl_headline {
+    font-size: 10rem;
+  }
+}
+@media (min-width: 1000px) {
+  .headline h1 {
+    font-size: 8rem;
+  }
+  #main_forside {
+    margin-left: 4vw;
+  }
+
+  .headline {
+    padding-top: 15vh;
+  }
+
+  .øl_headline {
+    margin-bottom: -2vw;
+  }
+
+  .headline p {
+    font-size: 1.15rem;
+    letter-spacing: 0.1rem;
+  }
 }
 
 @media (min-width: 600px) {
@@ -546,31 +586,43 @@ footer img {
   }
 }
 /* -----------------------------------------------------------OVERSIGT------------------------------------------------------- */
-.sidebar {
-  display: flex;
-}
-#info {
+
+/* #info {
   margin-bottom: 30px;
-}
+} */
 
 #info img {
   width: 30vw;
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #info h3 {
+  margin-top: 3vh;
+  margin-bottom: 15vh;
+  margin-left: 30%;
 }
 
-.produktInfo,
+.rating {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.anbefaling,
+.mereInfo,
+.rating,
+.rating_p,
 .popInfo {
   display: none;
 }
 
-.produktContainer {
+/* .produktContainer {
   position: relative;
   text-align: center;
   padding: 20px;
-}
+} */
 
 .headline_bajer {
   padding-top: 20vw;
@@ -594,26 +646,17 @@ footer img {
 .headline_bajer {
   gap: 5px;
 }
-.main_bajer {
-  margin-left: 45%;
-}
 
 @media (min-width: 768px) {
   .main_bajer {
-    margin-left: 25%;
+    margin-left: 20vw;
+    margin-right: 5vw;
   }
-  .produktInfo {
-    display: flex;
-  }
+
   .headline_bajer h2 {
     font-size: 6rem;
   }
 
-  .main_bajer #info {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 8vw;
-  }
   .headline_bajer {
     padding-top: 10vw;
     padding-bottom: 5vw;
@@ -623,48 +666,76 @@ footer img {
     padding-top: 0vw;
   }
 
+  .main_bajer #info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 8vw;
+  }
+
+  .anbefaling,
+  .mereInfo,
+  .rating_p,
+  .rating {
+    display: inline;
+  }
+
   #info {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     margin-bottom: 2vw;
     gap: 2vw;
   }
 
   #info img {
-    width: 60%;
+    width: 15vw;
     padding-top: 0vw;
     padding-bottom: 0vw;
-    grid-column: 1/3;
-    grid-row: 2/5;
-    align-self: center;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: end;
   }
 
   #info h3 {
-    grid-column: 3/5;
+    grid-column: 2/3;
     grid-row: 1/2;
-    font-size: 3rem;
-    padding-bottom: 0vw;
+    font-size: 2.5rem;
+    margin-left: 0;
+    margin-bottom: 0;
     align-self: end;
   }
   .anbefaling {
-    grid-column: 3/4;
-    grid-row: 2/4;
+    grid-column: 2/5;
+    grid-row: 2/2;
+    font-size: 1.3rem;
+    align-self: end;
+    margin-right: 2vw;
+    font-style: normal;
+  }
+  .rating_p {
+    grid-column: 5;
+    grid-row: 1/1;
+    margin-left: 5px;
+  }
+  .rating {
+    grid-column: 5;
+    grid-row: 2/2;
+    align-self: top;
+    margin-left: 5px;
   }
   #info .mereInfo {
     grid-column: 3/4;
     grid-row: 4/5;
   }
 
-  #info {
+  /*   #info {
     grid-column: 3/5;
     grid-row: 2/4;
     border-bottom: 0px;
-    border-right: 1px solid white;
     padding-top: 0vw;
     padding-bottom: 0vw;
     align-self: center;
-  }
+  } */
   .event .dato {
     grid-column: 5/6;
     grid-row: 2/4;
@@ -672,8 +743,64 @@ footer img {
   }
 }
 
-/* ------------------------------------OVERSIGT øl type nav bar----------------------------*/
+@media (min-width: 1025px) {
+  #info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 2vw;
+    gap: 2vw;
+  }
 
+  #info img {
+    width: 8vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: end;
+  }
+
+  #info h3 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 3rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    align-self: end;
+  }
+  .anbefaling {
+    grid-column: 2/4;
+    grid-row: 2/2;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    align-self: end;
+    margin-right: 2vw;
+  }
+  .rating_p {
+    grid-column: 5;
+    grid-row: 1/1;
+    margin-left: 5px;
+    font-size: 1.2rem;
+    align-self: end;
+  }
+  .rating {
+    grid-column: 5;
+    grid-row: 2/2;
+    align-self: top;
+    margin-left: 5px;
+    font-size: 1.6rem;
+  }
+  #info .mereInfo {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+}
+
+/* ------------------------------------OVERSIGT øl type nav bar----------------------------*/
+.sidebar {
+  display: flex;
+}
 .sidebar ul {
   list-style-type: none;
   margin: 0;
@@ -689,7 +816,7 @@ footer img {
 
 .sidebar li a {
   display: block;
-  width: 60px;
+  width: 40px;
   margin: 20px;
   padding: 0.2rem;
 }
@@ -702,5 +829,11 @@ footer img {
     padding: 0.4rem;
     font-family: "Work Sans", sans-serif;
     font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .sidebar ul {
+    top: 50vh;
   }
 }
