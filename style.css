@@ -612,8 +612,7 @@ footer img {
 
 .anbefaling,
 #info .button,
-.rating,
-.rating_p,
+.rating_text,
 .popInfo {
   display: none;
 }
@@ -674,8 +673,7 @@ footer img {
 
   .anbefaling,
   #info .button,
-  .rating_p,
-  .rating {
+  .rating_text {
     display: inline;
   }
 
