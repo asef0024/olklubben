@@ -27,9 +27,7 @@ let filter = "alle";
 function start() {
   const filterKnapper = document.querySelectorAll(".sidebar a");
   document.querySelector(".valgt").classList.add("selected");
-  filterKnapper.forEach((knap) =>
-    knap.addEventListener("click", filtrerOller)
-  );
+  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerOller));
   hentData();
 }
 
@@ -64,12 +62,13 @@ function visOller() {
 
       klon.querySelector("#info h3").textContent = ol.navn;
       klon.querySelector(".anbefaling").textContent = ol.anbefaling;
-      klon.querySelector(".procent").textContent =
-        ol.alkoholprocent + "%";
+      klon.querySelector(".procent").textContent = ol.alkoholprocent + "%";
 
       klon.querySelector(".rating").textContent = ol.rating + "/10";
-      klon.querySelector("#info img").src = "./billeder/" + ol.billede;
-
+      klon.querySelector("img").src = "./billeder/" + ol.billede;
+      klon
+        .querySelector("article")
+        .addEventListener("click", () => visPopUpOversigt(ol));
       /* klon
         .querySelector("article #mereInfo")
         .addEventListener("click", () => visOllen(ol)); */
@@ -77,4 +76,19 @@ function visOller() {
       container.appendChild(klon);
     }
   });
+
+  function visPopUpOversigt(ol) {
+    const popUp = document.querySelector("#popUp");
+    popUp.style.display = "block";
+
+    popUp.querySelector("img").src = "./billeder/" + ol.billede;
+    popUp.querySelector(".navn_popUp").textContent = ol.navn;
+    popUp.querySelector(".duft_tekst_popUp").textContent = ol.duft;
+    popUp.querySelector(".smagBeskrivelse_popUp").textContent = ol.smag;
+    popUp.querySelector(".rating_popUp").textContent = ol.rating + "/10";
+
+    document
+      .querySelector("#luk")
+      .addEventListener("click", () => (popUp.style.display = "none"));
+  }
 }

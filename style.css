@@ -800,6 +800,55 @@ footer img {
   }
 }
 
+/* ------------------------------------OVERSIGT POP-UP SIDE----------------------------------------------- */
+
+#popUp {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: scroll;
+  z-index: 2;
+}
+
+.luk_container {
+  height: 55px;
+  width: 55px;
+
+  display: inline-block;
+  background-color: #0101017c;
+  border-radius: 50%;
+  position: fixed;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  left: 7vw;
+  top: 10vh;
+  z-index: 4;
+}
+#luk {
+  position: fixed;
+  padding-left: 0.4rem;
+  padding-bottom: 0.4rem;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  left: 7vw;
+  top: 10vh;
+  z-index: 5;
+}
+
+@media (max-width: 700px) {
+}
+
+@media (max-width: 1000px) {
+}
+
 /* ------------------------------------OVERSIGT øl type nav bar----------------------------*/
 .sidebar {
   display: flex;
