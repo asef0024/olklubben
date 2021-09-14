@@ -724,7 +724,7 @@ footer img {
     align-self: top;
     margin-left: 5px;
   }
-  #info .mereInfo {
+  #info .button {
     grid-column: 3/4;
     grid-row: 4/5;
   }
@@ -794,7 +794,7 @@ footer img {
     margin-left: 5px;
     font-size: 1.6rem;
   }
-  #info .mereInfo {
+  #info .button {
     grid-column: 3/4;
     grid-row: 4/5;
   }
