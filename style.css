@@ -879,7 +879,7 @@ footer img {
 .popUp_billede_flexContainer {
   display: flex;
   align-self: center;
-  padding-top: 5vh;
+  padding-top: 6vh;
 }
 
 #popUp img {
@@ -887,6 +887,13 @@ footer img {
   margin: 0 auto;
 }
 
+#popUp article {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+#popUp h3 {
+}
 .luk_container {
   height: 55px;
   width: 55px;
@@ -912,8 +919,8 @@ footer img {
   font-weight: bolder;
   color: white;
   cursor: pointer;
-  left: 7vw;
-  top: 10vh;
+  right: 10vw;
+  top: 3vh;
   z-index: 5;
 }
 

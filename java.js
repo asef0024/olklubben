@@ -13,8 +13,10 @@ function toggleMenu() {
 
   if (erSkjult == true) {
     document.querySelector("#menuknap").textContent = "☰";
+    document.querySelector(".sidebar").classList.remove("skjulSideBar");
   } else {
     document.querySelector("#menuknap").textContent = "×";
+    document.querySelector(".sidebar").classList.add("skjulSideBar");
   }
 }
 
