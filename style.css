@@ -947,7 +947,12 @@ footer img {
   margin: 10px;
   padding: 0.2rem;
 }
-x @media (min-width: 700px) {
+
+.skjulSideBar {
+  display: none;
+}
+
+@media (min-width: 700px) {
   .sidebar li a {
     display: block;
     width: 80px;
