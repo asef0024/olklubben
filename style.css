@@ -633,9 +633,8 @@ footer img {
 }
 
 .anbefaling,
-.mereInfo,
-.rating,
-.rating_p,
+#info .button,
+.rating_text,
 .popInfo {
   display: none;
 }
@@ -695,9 +694,8 @@ footer img {
   }
 
   .anbefaling,
-  .mereInfo,
-  .rating_p,
-  .rating {
+  #info .button,
+  .rating_text {
     display: inline;
   }
 
@@ -734,19 +732,19 @@ footer img {
     margin-right: 2vw;
     font-style: normal;
   }
-  .rating_p {
+  /* .rating_p {
     grid-column: 5;
     grid-row: 1/1;
     align-self: end;
     margin-left: 5px;
-  }
-  .rating {
+  } */
+  .rating_text {
     grid-column: 5;
     grid-row: 2/2;
     align-self: top;
     margin-left: 5px;
   }
-  #info .mereInfo {
+  #info .button {
     grid-column: 3/4;
     grid-row: 4/5;
   }
@@ -793,28 +791,30 @@ footer img {
     align-self: end;
   }
   .anbefaling {
-    grid-column: 2/4;
+    grid-column: 2/5;
     grid-row: 2/2;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     align-self: end;
     margin-right: 2vw;
+    border-right: 1px solid white;
+    padding-right: 2vw;
   }
-  .rating_p {
+  /*   .rating_p {
     grid-column: 5;
     grid-row: 1/1;
     margin-left: 5px;
     font-size: 1.2rem;
     align-self: end;
-  }
-  .rating {
+  } */
+  .rating_text {
     grid-column: 5;
     grid-row: 2/2;
     align-self: top;
     margin-left: 5px;
     font-size: 1.6rem;
   }
-  #info .mereInfo {
+  #info .button {
     grid-column: 3/4;
     grid-row: 4/5;
   }
