@@ -23,6 +23,7 @@ h1 span {
 
 h2 {
   color: white;
+  font-size: 4rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 800;
 }
@@ -300,24 +301,26 @@ a {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 15px;
-  font-weight: normal;
-  font-style: normal;
   font-size: 1.2rem;
   color: white;
-  font-family: "Opens Sans", sans-serif;
   line-height: 1.8rem;
 }
 
 #om_os img {
-  width: 76%;
+  width: 100%;
   height: auto;
-  border-radius: 2%;
+}
+
+.klubben_img {
+  text-align: center;
 }
 
 #om_os {
   margin: 0 auto;
-  padding: 15vw;
-  padding-top: 125px;
+  padding-top: 20vw;
+  padding-bottom: 10vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 @media (min-width: 700px) {
@@ -325,6 +328,12 @@ a {
     max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    padding-top: 10vw;
+  }
+
+  #om_os img {
+    width: 76%;
+    height: auto;
   }
 
   #om_os h2 {
@@ -347,14 +356,19 @@ a {
 }
 
 /*-----------------------------------------------------------EVENTS---------------------------------------*/
-.headline_events h2 {
-  font-size: 5rem;
-}
 
 .headline_events p {
-  font-size: 1.2rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  font-size: 1rem;
   font-family: "Open Sans", sans-serif;
   padding-top: 5vw;
+  line-height: 1.8rem;
+}
+
+.headline_events h2 {
+  overflow-wrap: break-word;
 }
 
 .headline_events {
@@ -363,11 +377,14 @@ a {
 }
 
 #main_events {
-  max-width: 1100px;
   padding-top: 0;
   padding-left: 3vw;
   padding-right: 3vw;
-  padding-bottom: 20vw;
+  padding-bottom: 10vw;
+}
+
+#main_events p {
+  font-size: 1.2rem;
 }
 
 #events img {
@@ -385,23 +402,27 @@ a {
   font-size: 2rem;
   padding-bottom: 1vw;
   text-align: center;
+  color: #e2a326;
+  font-weight: bold;
 }
 
 .event .dato {
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .event .beskrivelse {
-  /* border-bottom: 1px solid white; */
   padding-top: 2vw;
   padding-bottom: 5vw;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
   #main_events {
     max-width: 1100px;
     margin: 0 auto;
-    padding-bottom: 8vw;
+    padding-bottom: 5vw;
   }
   .headline_events {
     padding-top: 10vw;
@@ -435,10 +456,11 @@ a {
   .event h3 {
     grid-column: 3/5;
     grid-row: 1/2;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-bottom: 0vw;
     text-align: left;
   }
+
   .event .beskrivelse {
     grid-column: 3/5;
     grid-row: 2/4;
