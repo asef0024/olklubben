@@ -876,8 +876,8 @@ footer img {
   font-weight: bolder;
   color: white;
   cursor: pointer;
-  left: 7vw;
-  top: 10vh;
+  left: 4vw;
+  top: 4vh;
   z-index: 4;
 }
 
@@ -909,7 +909,8 @@ footer img {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 50vh;
+  top: 45vh;
+  left: 2vh;
   z-index: 1;
   width: auto;
   overflow-x: hidden;
@@ -920,11 +921,10 @@ footer img {
   cursor: pointer;
   display: block;
   width: 40px;
-  margin: 20px;
+  margin: 10px;
   padding: 0.2rem;
 }
-
-@media (min-width: 700px) {
+x @media (min-width: 700px) {
   .sidebar li a {
     display: block;
     width: 80px;
