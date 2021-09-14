@@ -853,7 +853,9 @@ footer img {
 .popUp_billede_flexContainer {
   display: flex;
   align-self: center;
+  padding-top: 5vh;
 }
+
 #popUp img {
   height: 40vh;
   margin: 0 auto;
@@ -875,6 +877,7 @@ footer img {
   top: 10vh;
   z-index: 4;
 }
+
 #luk_knap {
   position: fixed;
   padding-left: 0.4rem;
@@ -907,7 +910,6 @@ footer img {
   z-index: 1;
   width: auto;
   overflow-x: hidden;
-  background-color: #24221d;
   color: #fffdf3;
 }
 
