@@ -846,9 +846,17 @@ footer img {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background: #111;
   overflow: scroll;
   z-index: 2;
+}
+.popUp_billede_flexContainer {
+  display: flex;
+  align-self: center;
+}
+#popUp img {
+  height: 40vh;
+  margin: 0 auto;
 }
 
 .luk_container {
@@ -867,7 +875,7 @@ footer img {
   top: 10vh;
   z-index: 4;
 }
-#luk {
+#luk_knap {
   position: fixed;
   padding-left: 0.4rem;
   padding-bottom: 0.4rem;
