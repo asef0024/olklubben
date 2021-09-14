@@ -37,6 +37,10 @@ p {
   font-family: "Opens Sans", sans-serif;
 }
 
+a {
+  font-family: "Opens Sans", sans-serif;
+}
+
 h3 {
   font-family: "Work Sans", sans-serif;
   font-weight: 450;
@@ -241,7 +245,7 @@ a {
   .headline .øl_headline {
     color: #e2a326;
     font-family: "Work Sans", sans-serif;
-    top: 7rem;
+    padding-top: 4rem;
     left: 0.4rem;
   }
 
