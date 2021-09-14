@@ -63,7 +63,7 @@ function visOller() {
       let klon = menu.cloneNode(true).content;
 
       klon.querySelector("#info h3").textContent = ol.navn;
-      klon.querySelector(".udseende").textContent = ol.udseende;
+      klon.querySelector(".anbefaling").textContent = ol.udseende;
       klon.querySelector(".procent").textContent =
         ol.alkoholprocent + "%";
 
