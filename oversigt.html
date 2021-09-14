@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+  
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,25 +17,28 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="background_image_container">
       <header>
         <nav>
+         <!-- logo som knap der fører til forsiden -->
           <a href="index.html"
             ><img src="logo/ølklubben_logo.svg" alt="logo" class="logo"
           /></a>
-
+          <!-- vi putter en hidden class på menuen, som skjuler menuen når vi er i mobile -->
           <ul id="menu" class="hidden">
             <li><a href="index.html">FORSIDE</a></li>
             <li><a href="oversigt.html">ØL</a></li>
             <li><a href="klubben.html">KLUBBEN</a></li>
             <li><a href="events.html">EVENTS</a></li>
           </ul>
+          <!-- knap til burgermenuen som bliver vist i mobile -->
           <div id="menuknap">☰</div>
         </nav>
       </header>
 
-<section id="popUp">
+    <section id="popUp">
          <div class="luk_knap_container">
       <div id="luk_knap">&#x2715
       </div>
@@ -42,7 +47,7 @@
         <div class="popUp_billede_flexContainer">
         <img src="" alt="" class="øl_popUp_billeder" />
         </div>
-        <!-- <h2></h2> -->
+        
         <div class="tekst_container_popup">
      
         <h3><span class="navn_popUp"></span></h3>
@@ -89,7 +94,7 @@
               <a href="oversigt.html" class="button">Læs mere</a>
               <!-- <button class="mereInfo">Mere info</button> -->
               <div class="rating_text">
-              <p>Rating: <br /></p>
+              <p>Rating: <br></p>
               <p class="rating"></p>
             </div>
             </div>
@@ -105,6 +110,7 @@
       </main>
 
       <footer>
+        <!-- footer med 4 forskellige sections til at placere i grid -->
         <div class="first_section">
           <div class="footer_logo">
             <img src="logo/ølklubben_logo.svg" alt="footer_logo" />
