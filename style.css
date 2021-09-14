@@ -471,10 +471,9 @@ a {
     grid-column: 3/5;
     grid-row: 2/4;
     border-bottom: 0px;
-    border-right: 1px solid white;
     padding-top: 0vw;
     padding-bottom: 0vw;
-    padding-right: 1vw;
+    padding-right: 0vw;
     align-self: center;
   }
   .event .dato {
@@ -482,6 +481,11 @@ a {
     grid-row: 2/4;
     align-self: center;
     text-align: left;
+    padding-left: 2vw;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-left: 1px solid white;
   }
 }
 
@@ -702,12 +706,6 @@ footer img {
     font-size: 1.2rem;
   }
 
-  .main_bajer #info {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-bottom: 2vw;
-  }
-
   .anbefaling,
   #info .button,
   .rating_text {
@@ -719,6 +717,9 @@ footer img {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2vw;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 2vw;
   }
 
   #info img {
