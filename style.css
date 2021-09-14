@@ -157,7 +157,7 @@ a {
 /*---------------------------------------------------BURGER MENU---------------------------------------------------------*/
 
 .hidden {
-  overflow: hidden;
+  /* overflow: hidden; */
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
@@ -230,7 +230,7 @@ a {
 
   #menu {
     color: white;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     display: flex;
     justify-content: space-between;
     align-items: center;
