@@ -855,6 +855,6 @@ footer img {
 
 @media (min-width: 1025px) {
   .sidebar ul {
-    top: 50vh;
+    top: 35vh;
   }
 }
