@@ -696,6 +696,7 @@ footer img {
   }
 
   .headline_bajer p {
+    align-self: center;
     padding-top: 0vw;
     font-size: 1.2rem;
   }
@@ -753,8 +754,8 @@ footer img {
   } */
   .rating_text {
     grid-column: 5;
-    grid-row: 2/2;
-    align-self: top;
+    grid-row: 2;
+    align-self: center;
     margin-left: 5px;
   }
   #info .button {
