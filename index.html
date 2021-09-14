@@ -19,21 +19,24 @@
     <div class="background_image_container">
       <header>
         <nav>
+          <!-- logo som knap der fører til forsiden -->
           <a href="index.html"
             ><img src="logo/ølklubben_logo.svg" alt="logo" class="logo"
           /></a>
-
+          <!-- vi putter en hidden class på menuen, som skjuler menuen når vi er i mobile -->
           <ul id="menu" class="hidden">
             <li><a href="index.html">FORSIDE</a></li>
             <li><a href="oversigt.html">ØL</a></li>
             <li><a href="klubben.html">KLUBBEN</a></li>
             <li><a href="events.html">EVENTS</a></li>
           </ul>
+          <!-- knap til burgermenuen som bliver vist i mobile -->
           <div id="menuknap">☰</div>
         </nav>
       </header>
 
       <main id="main_forside">
+        <!-- div til at styre overskrifterne samlet -->
         <div class="headline">
           <h1 class="øl_headline">ØL?</h1>
           <h1>WE GOT YOU</h1>
@@ -42,6 +45,7 @@
             bedste at slukke tørsten i? Fat mod! Vores eksperter er klar til
             vise dig præcis hvad du har brug for.
           </p>
+          <!-- knapper der fører til henholdsvis øloversigten og eventkalenderen -->
           <div class="button_container_forside">
             <a href="oversigt.html" class="button">Øl</a>
             <a href="events.html" class="button">Events</a>
@@ -50,6 +54,7 @@
       </main>
 
       <footer>
+        <!-- footer med 4 forskellige sections til at placere i grid -->
         <div class="first_section">
           <div class="footer_logo">
             <img src="logo/ølklubben_logo.svg" alt="footer_logo" />
@@ -61,6 +66,7 @@
             Ølklubben APS <br />
             Valbygårdsvej 33, Tårnet th. <br />
             2500 Valby <br />
+            <!-- a tags med semantisk opmærkning til mail og telefon -->
             Telefon: <a href="tel:+ +45 22165527">+45 22165527</a> <br />
             E-mail:
             <a href="mailto:olklubben@hotmail.com">olklubben@hotmail.com</a>
