@@ -782,11 +782,10 @@ footer img {
 
 @media (min-width: 1025px) {
   #info {
+    padding: 0vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin-bottom: 2vw;
-    gap: 2vw;
   }
 
   #info img {
@@ -799,8 +798,9 @@ footer img {
   }
 
   #info h3 {
+    color: rgb(182, 133, 27);
     grid-column: 2 / span 3;
-    grid-row: 1/2;
+    grid-row: 1;
     font-size: 3rem;
     margin-left: 0;
     margin-bottom: 0;
