@@ -69,9 +69,9 @@ function visOller() {
       klon.querySelector(".rating").textContent = ol.rating + "/10";
       klon.querySelector("img").src = "./billeder/" + ol.billede;
 
-      // klon
-      //   .querySelector("#info button")
-      //   .addEventListener("click", () => visPopUpOversigt(ol));
+     klon
+    .querySelector("#info button")
+    .addEventListener("click", () => visPopUpOversigt(ol));
 
       klon
         .querySelector("#info img")
