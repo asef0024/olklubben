@@ -583,6 +583,7 @@ footer img {
     gap: 20px;
     padding: 1vw;
     font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .fisk {
@@ -867,13 +868,16 @@ footer img {
 #popUp {
   display: none;
   position: fixed;
+
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: #111;
-  overflow: scroll;
+  background: rgba(17, 17, 17, 0.945);
+  max-width: 800px;
   z-index: 2;
+  /* Fantastisk css property. Tillader at lukke for scroll på baggrunden. */
+  overscroll-behavior: contain;
 }
 .popUp_billede_flexContainer {
   display: flex;
@@ -885,14 +889,78 @@ footer img {
   height: 40vh;
   margin: 0 auto;
 }
-
+.tekst_container_popup {
+  margin-bottom: 5vh;
+}
 #popUp article {
   margin-left: 10vw;
   margin-right: 10vw;
 }
 
 #popUp h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
+#popUp p {
+  /* font-size: 1rem; */
+  padding-bottom: 1rem;
+  line-height: 1.3rem;
+}
+
+h4 {
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.rating_procent_p_tekst {
+  font-size: 0.6rem;
+}
+.ratingFlexContainer {
+  display: block;
+}
+
+.procentFlexContainer {
+  display: block;
+}
+
+.Procent_rating_info_gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 1px;
+}
+.Procent_rating_info_gridContainer p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+  opacity: 0.8;
+}
+.rating_popUp {
+}
+
+.alkoholProcent_popUp {
+}
+
+/* Ipad */
+
+@media (min-width: 700px) {
+  #popUp {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Web */
+@media (min-width: 1025px) {
+}
+
 .luk_container {
   height: 55px;
   width: 55px;
