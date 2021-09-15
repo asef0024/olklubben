@@ -98,6 +98,7 @@ function visOller() {
   function visPopUpOversigt(ol) {
     const popUp = document.querySelector("#popUp");
     popUp.style.display = "flex";
+    document.body.style.overflow = "hidden";
     document.querySelector(".sidebar").classList.add("skjulSideBar");
     popUp.querySelector("img").src = "./billeder/" + ol.billede;
     popUp.querySelector(".navn_popUp").textContent = ol.navn;
@@ -110,6 +111,8 @@ function visOller() {
 
     function skjulmenu() {
       popUp.style.display = "none";
+      document.body.style.overflow = "visible";
+
       document.querySelector(".sidebar").classList.remove("skjulSideBar");
     }
   }
