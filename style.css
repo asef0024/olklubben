@@ -599,32 +599,17 @@ footer img {
     font-size: 0.8rem;
   }
 
-  ul {
-    position: relative;
-    font-size: 0.5rem;
-    gap: 20px;
-    padding: 1vw;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-
   .first_section {
     grid-column: 1;
     grid-row: 1;
-    position: relative;
-    left: -8vw;
   }
 
   .fourth_section {
     grid-column: 2;
     grid-row: 1;
-    position: relative;
-    left: -6vw;
   }
 
   .second_section {
-    position: relative;
-    left: -10vw;
     grid-column: 1;
     grid-row: 2;
   }
@@ -632,8 +617,6 @@ footer img {
   .third_section {
     grid-column: 2;
     grid-row: 2;
-    position: relative;
-    left: -6vw;
   }
 }
 /* -----------------------------------------------------------OVERSIGT------------------------------------------------------- */
