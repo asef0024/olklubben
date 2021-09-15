@@ -524,17 +524,18 @@ footer a:visited {
 }
 
 footer img {
-  padding-top: 2vw;
   align-self: center/center;
   width: 70%;
 }
 
 .insta {
+  padding-top: 1vw;
   width: 4vw;
   height: 4vw;
 }
 
 .footer_logo {
+  padding-top: 2vw;
   width: 20vw;
 }
 
