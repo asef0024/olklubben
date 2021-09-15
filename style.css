@@ -500,17 +500,19 @@ a {
 /* -----------------------------------------------------------FOOTER------------------------------------------------------- */
 
 footer {
+  padding-left: 5vw;
+  padding-bottom: 2vw;
+  margin: 0 auto;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  margin: 0 auto;
-  padding-left: 7vw;
-  font-size: 1rem;
   font-family: "Work Sans", sans-serif;
   color: white;
   background-color: rgb(22, 20, 20);
+}
+
+footer h4 {
+  font-size: 1.5rem;
 }
 
 footer a {
@@ -522,6 +524,8 @@ footer a:visited {
 }
 
 footer img {
+  padding-top: 2vw;
+  align-self: center/center;
   width: 70%;
 }
 
@@ -534,15 +538,6 @@ footer img {
   width: 20vw;
 }
 
-.second_section {
-  position: relative;
-}
-
-.first_Section {
-  position: relative;
-  padding-left: 12vw;
-}
-
 @media (max-width: 600px) {
   footer {
     display: grid;
@@ -550,16 +545,19 @@ footer img {
     font-size: 0.8rem;
   }
 
+  .footer_logo {
+    width: 40vw;
+  }
+
   .first_section {
+    padding-top: 4vw;
     grid-column: 1;
     grid-row: 1;
-    padding-bottom: 3vw;
   }
 
   .fourth_section {
     grid-column: 2;
     grid-row: 1;
-    padding-bottom: 3vw;
   }
 
   .second_section {
@@ -592,10 +590,6 @@ footer img {
     padding: 1vw;
     font-size: 0.8rem;
     font-weight: 600;
-  }
-
-  .fisk {
-    padding-right: 3vw;
   }
 
   .first_section {
