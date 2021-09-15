@@ -333,6 +333,7 @@ a {
   #om_os {
     max-width: 1100px;
     display: grid;
+    gap: 15px;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     padding-top: 10vw;
   }
@@ -365,7 +366,6 @@ a {
   .headline_klubben_2 {
     grid-column: 2;
     grid-row: 2;
-    padding-top: 51px;
   }
 }
 
