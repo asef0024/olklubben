@@ -60,6 +60,10 @@ h3 {
   padding-left: 3rem;
   margin-top: 3rem;
   margin-right: 0.5rem;
+  background-color: rgba(17, 17, 17, 0);
+  color: white;
+  font-family: "Opens Sans", sans-serif;
+  font-size: 1rem;
 }
 
 .button:hover {
