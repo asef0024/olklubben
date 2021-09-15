@@ -79,6 +79,8 @@ function visOller() {
     }
   });
 
+  
+
   function visPopUpOversigt(ol) {
     const popUp = document.querySelector("#popUp");
     popUp.style.display = "block";
