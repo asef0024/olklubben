@@ -68,12 +68,28 @@ function visOller() {
 
       klon.querySelector(".rating").textContent = ol.rating + "/10";
       klon.querySelector("img").src = "./billeder/" + ol.billede;
+
+      // klon
+      //   .querySelector("#info button")
+      //   .addEventListener("click", () => visPopUpOversigt(ol));
+
       klon
-        .querySelector("article")
+        .querySelector("#info img")
         .addEventListener("click", () => visPopUpOversigt(ol));
-      /* klon
-        .querySelector("article #mereInfo")
-        .addEventListener("click", () => visOllen(ol)); */
+
+      console.log("#info img");
+      // // Function som måler
+      // window.addEventListener("resize", function () {
+      //   if (window.matchMedia("(max-width: 768px)").matches) {
+      //     klon
+      //       .querySelector("#info img")
+      //       .addEventListener("click", () => visPopUpOversigt(ol));
+      //   } else {
+      //     klon
+      //       .querySelector("#info .button")
+      //       .addEventListener("click", () => visPopUpOversigt(ol));
+      //   }
+      // });
 
       container.appendChild(klon);
     }
@@ -90,7 +106,8 @@ function visOller() {
     popUp.querySelector(".duft_tekst_popUp").textContent = ol.duft;
     popUp.querySelector(".smagBeskrivelse_popUp").textContent = ol.smag;
     popUp.querySelector(".rating_popUp").textContent = ol.rating + "/10";
-
+    popUp.querySelector(".alkoholProcent_popUp").textContent =
+      ol.alkoholprocent + "%";
     document.querySelector("#luk_knap").addEventListener("click", skjulmenu);
 
     function skjulmenu() {

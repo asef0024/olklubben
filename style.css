@@ -66,6 +66,21 @@ h3 {
   background-color: rgb(230, 163, 20);
 }
 
+.oversigt_button {
+  margin-top: 2rem;
+  border: solid 2px rgb(230, 163, 20);
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-top: 3rem;
+  margin-right: 0.5rem;
+}
+
+.oversigt_button:hover {
+  background-color: rgb(230, 163, 20);
+}
+
 .headline p {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -333,12 +348,13 @@ a {
   #om_os {
     max-width: 1100px;
     display: grid;
+    gap: 15px;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     padding-top: 10vw;
   }
-
+  /* hej */
   #om_os img {
-    width: 76%;
+    width: 95%;
     height: auto;
   }
 
@@ -355,9 +371,16 @@ a {
     grid-column: 2;
   }
 
+  .klubben_img_2 {
+    padding-right: 30px;
+    padding-top: 2vw;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
   .headline_klubben_2 {
-    grid-column: 1 / span 3;
-    padding-top: 30px;
+    grid-column: 2;
+    grid-row: 2;
   }
 }
 
@@ -492,17 +515,19 @@ a {
 /* -----------------------------------------------------------FOOTER------------------------------------------------------- */
 
 footer {
+  padding-left: 5vw;
+  padding-bottom: 2vw;
+  margin: 0 auto;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  margin: 0 auto;
-  padding-left: 7vw;
-  font-size: 1rem;
   font-family: "Work Sans", sans-serif;
   color: white;
   background-color: rgb(22, 20, 20);
+}
+
+footer h4 {
+  font-size: 1.5rem;
 }
 
 footer a {
@@ -514,25 +539,19 @@ footer a:visited {
 }
 
 footer img {
+  align-self: center/center;
   width: 70%;
 }
 
 .insta {
+  padding-top: 1vw;
   width: 4vw;
   height: 4vw;
 }
 
 .footer_logo {
+  padding-top: 2vw;
   width: 20vw;
-}
-
-.second_section {
-  position: relative;
-}
-
-.first_Section {
-  position: relative;
-  padding-left: 12vw;
 }
 
 @media (max-width: 600px) {
@@ -542,16 +561,19 @@ footer img {
     font-size: 0.8rem;
   }
 
+  .footer_logo {
+    width: 40vw;
+  }
+
   .first_section {
+    padding-top: 4vw;
     grid-column: 1;
     grid-row: 1;
-    padding-bottom: 3vw;
   }
 
   .fourth_section {
     grid-column: 2;
     grid-row: 1;
-    padding-bottom: 3vw;
   }
 
   .second_section {
@@ -583,10 +605,7 @@ footer img {
     gap: 20px;
     padding: 1vw;
     font-size: 0.8rem;
-  }
-
-  .fisk {
-    padding-right: 3vw;
+    font-weight: 600;
   }
 
   .first_section {
@@ -847,7 +866,6 @@ footer img {
   .rating_text {
     grid-column: 5;
     grid-row: 2/2;
-    align-self: top;
     margin-left: 5px;
     font-size: 1.6rem;
   }
@@ -871,9 +889,11 @@ footer img {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: #111;
-  overflow: scroll;
+  background: rgba(17, 17, 17, 0.945);
+  max-width: 800px;
   z-index: 2;
+  /* Fantastisk css property. Tillader at lukke for scroll på baggrunden. */
+  overscroll-behavior: contain;
 }
 .popUp_billede_flexContainer {
   display: flex;
@@ -885,14 +905,78 @@ footer img {
   height: 40vh;
   margin: 0 auto;
 }
-
+.tekst_container_popup {
+  margin-bottom: 5vh;
+}
 #popUp article {
   margin-left: 10vw;
   margin-right: 10vw;
 }
 
 #popUp h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
+#popUp p {
+  /* font-size: 1rem; */
+  padding-bottom: 1rem;
+  line-height: 1.3rem;
+}
+
+h4 {
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.rating_procent_p_tekst {
+  font-size: 0.6rem;
+}
+.ratingFlexContainer {
+  display: block;
+}
+
+.procentFlexContainer {
+  display: block;
+}
+
+.Procent_rating_info_gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 1px;
+}
+.Procent_rating_info_gridContainer p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+  opacity: 0.8;
+}
+.rating_popUp {
+}
+
+.alkoholProcent_popUp {
+}
+
+/* Ipad */
+
+@media (min-width: 700px) {
+  #popUp {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Web */
+@media (min-width: 1025px) {
+}
+
 .luk_container {
   height: 55px;
   width: 55px;
