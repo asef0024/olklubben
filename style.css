@@ -876,7 +876,6 @@ footer img {
 #popUp {
   display: none;
   position: fixed;
-
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -884,7 +883,7 @@ footer img {
   max-width: 800px;
   z-index: 2;
   /* Fantastisk css property. Tillader at lukke for scroll på baggrunden. */
-  overscroll-behavior: contain;
+  /* overscroll-behavior: contain; */
 }
 .popUp_billede_flexContainer {
   display: flex;
