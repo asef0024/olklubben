@@ -69,9 +69,9 @@ function visOller() {
       klon.querySelector(".rating").textContent = ol.rating + "/10";
       klon.querySelector("img").src = "./billeder/" + ol.billede;
 
-     klon
-    .querySelector("#info button")
-    .addEventListener("click", () => visPopUpOversigt(ol));
+      klon
+        .querySelector("#info button")
+        .addEventListener("click", () => visPopUpOversigt(ol));
 
       klon
         .querySelector("#info img")
@@ -95,11 +95,9 @@ function visOller() {
     }
   });
 
-  
-
   function visPopUpOversigt(ol) {
     const popUp = document.querySelector("#popUp");
-    popUp.style.display = "block";
+    popUp.style.display = "flex";
     document.querySelector(".sidebar").classList.add("skjulSideBar");
     popUp.querySelector("img").src = "./billeder/" + ol.billede;
     popUp.querySelector(".navn_popUp").textContent = ol.navn;

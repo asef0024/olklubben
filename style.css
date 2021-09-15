@@ -885,11 +885,15 @@ footer img {
 }
 
 /* ------------------------------------OVERSIGT POP-UP SIDE----------------------------------------------- */
+.popUp_container {
+  display: flex;
+  justify-content: center;
+}
 
 #popUp {
   display: none;
   position: fixed;
-  left: 0;
+
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -999,19 +1003,23 @@ h4 {
 }
 
 #luk_knap {
-  position: fixed;
+  position: absolute;
   padding-left: 0.4rem;
   padding-bottom: 0.4rem;
   font-size: 1.7em;
   font-weight: bolder;
   color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
   right: 10vw;
-  top: 3vh;
+  top: 4vh;
   z-index: 5;
 }
 
 @media (max-width: 700px) {
+  #luk_knap {
+  }
 }
 
 @media (max-width: 1000px) {
