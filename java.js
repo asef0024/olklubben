@@ -13,8 +13,10 @@ function toggleMenu() {
 
   if (erSkjult == true) {
     document.querySelector("#menuknap").textContent = "☰";
+    document.querySelector(".sidebar").classList.remove("skjulSideBar");
   } else {
     document.querySelector("#menuknap").textContent = "×";
+    document.querySelector(".sidebar").classList.add("skjulSideBar");
   }
 }
 
@@ -86,7 +88,8 @@ function visOller() {
     popUp.querySelector(".duft_tekst_popUp").textContent = ol.duft;
     popUp.querySelector(".smagBeskrivelse_popUp").textContent = ol.smag;
     popUp.querySelector(".rating_popUp").textContent = ol.rating + "/10";
-
+    popUp.querySelector(".alkoholProcent_popUp").textContent =
+      ol.alkoholprocent + "%";
     document.querySelector("#luk_knap").addEventListener("click", skjulmenu);
 
     function skjulmenu() {
