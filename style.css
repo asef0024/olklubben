@@ -873,6 +873,8 @@ footer img {
   justify-content: center;
 }
 
+.blurFunction {
+}
 #popUp {
   display: none;
   position: fixed;

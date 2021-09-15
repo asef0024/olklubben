@@ -5,6 +5,13 @@ function sidenVises() {
   document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 }
 
+// https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+// Kode som gør at der automatisk scrolles til top når man filtrerer.
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 function toggleMenu() {
   console.log("toggleMenu");
   document.querySelector("#menu").classList.toggle("hidden");
@@ -111,7 +118,7 @@ function visOller() {
 
     function skjulmenu() {
       popUp.style.display = "none";
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = "hidden";
 
       document.querySelector(".sidebar").classList.remove("skjulSideBar");
     }
