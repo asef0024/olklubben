@@ -102,7 +102,7 @@ h3 {
 .background_image_container {
   overflow-x: hidden;
   background-color: black;
-  background-image: url("billeder/splash.jpg");
+  background-image: url("billeder/splash.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
