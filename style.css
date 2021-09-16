@@ -160,17 +160,17 @@ nav {
   background: rgb(5, 5, 5);
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #menu a:hover {
   color: rgb(230, 163, 20);
 }
 
-a:visited {
-  color: white;
-}
-
-a {
-  text-decoration: none;
-  color: white;
+#menu a:active {
+  color: rgb(230, 163, 20);
 }
 
 /*---------------------------------------------------BURGER MENU---------------------------------------------------------*/
