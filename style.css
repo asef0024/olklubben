@@ -875,6 +875,7 @@ footer img {
 
 .blurFunction {
 }
+
 #popUp {
   display: none;
   position: fixed;
@@ -884,6 +885,8 @@ footer img {
   background: rgba(17, 17, 17, 0.945);
   max-width: 800px;
   z-index: 2;
+  overflow: scroll;
+
   /* Fantastisk css property. Tillader at lukke for scroll på baggrunden. */
   /* overscroll-behavior: contain; */
 }
