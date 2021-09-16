@@ -534,6 +534,7 @@ a {
 /* -----------------------------------------------------------FOOTER------------------------------------------------------- */
 
 footer {
+  text-align: center;
   padding-bottom: 2vw;
   margin: 0 auto;
   width: 100vw;
@@ -557,23 +558,25 @@ footer a:visited {
 }
 
 footer img {
-  align-self: center/center;
   width: 70%;
 }
 
 .insta {
-  padding-top: 1vw;
-  width: 4vw;
-  height: 4vw;
+  padding-top: 2vw;
+  margin: 0 auto;
+  width: 5vw;
+  height: 5vw;
 }
 
 .footer_logo {
-  padding-left: 5vw;
-  padding-top: 3vw;
+  text-align: center;
+  padding-top: 2vw;
+  padding-left: 7vw;
+  margin: 0 auto;
   width: 20vw;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -581,12 +584,12 @@ footer img {
   }
 
   .footer_logo {
-    padding-top: 2.8vw;
-    width: 40vw;
+    width: 30vw;
   }
 
   .insta {
     width: 7vw;
+    padding-top: 7vw;
   }
 
   .first_section {
@@ -617,7 +620,7 @@ footer img {
   }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -643,7 +646,7 @@ footer img {
     grid-column: 2;
     grid-row: 2;
   }
-}
+} */
 /* -----------------------------------------------------------OVERSIGT------------------------------------------------------- */
 
 /* #info {
