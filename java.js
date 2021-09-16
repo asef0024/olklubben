@@ -1,16 +1,9 @@
 window.addEventListener("load", sidenVises);
 
-// Funktion smo lytter efter at siden åbnes. Derefter kaldes en eventlistener på burger menu.
+// Funktion som lytter efter at siden åbnes. Derefter kaldes en eventlistener på burger menu.
 function sidenVises() {
   console.log("siden vises");
   document.querySelector("#menuknap").addEventListener("click", toggleMenu);
-}
-
-// https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
-// Kode som gør at der automatisk scrolles til top når man filtrerer.
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox & IE
 }
 
 // Toggle funktion til brug af burger menu.
@@ -36,6 +29,13 @@ function toggleMenu() {
 
 // Venter på at DOM elementer er loaded
 document.addEventListener("DOMContentLoaded", start);
+
+// https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+// Kode som gør at der automatisk scrolles til top når man filtrerer.
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox & IE
+}
 
 // Variabler for filtrering
 let header = document.querySelector("#typer");
@@ -97,10 +97,12 @@ function visOller() {
       klon.querySelector(".rating").textContent = ol.rating + "/10";
       klon.querySelector("img").src = "./billeder/" + ol.billede;
 
+      // Funktion som gennem knap under produktsiden i ipad (eller større format) starter popUp funktionen.
       klon
         .querySelector("#info button")
         .addEventListener("click", () => visPopUpOversigt(ol));
 
+      // Funktion som gennem billede under produktsiden i mobil format starter popUp funktionen.
       klon
         .querySelector("#info img")
         .addEventListener("click", () => visPopUpOversigt(ol));
@@ -139,7 +141,7 @@ function visOller() {
     // Side navigationsbar skjules
     document.querySelector(".sidebar").classList.add("skjulSideBar");
 
-    // Indsættelse af data fra JSON.
+    // Via dot notation indsættelse af data fra JSON.
     popUp.querySelector("img").src = "./billeder/" + ol.billede;
     popUp.querySelector(".navn_popUp").textContent = ol.navn;
     popUp.querySelector(".duft_tekst_popUp").textContent = ol.duft;
@@ -155,7 +157,6 @@ function visOller() {
     function skjulmenu() {
       popUp.style.display = "none";
       document.body.style.overflow = "scroll";
-
       // Sidenavigationsmenu vises igen ved luk af popUp vindue.
       document.querySelector(".sidebar").classList.remove("skjulSideBar");
     }
