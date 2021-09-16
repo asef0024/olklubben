@@ -562,7 +562,7 @@ footer a:visited {
 }
 
 footer img {
-  padding-top: 2vw;
+  padding-top: 3vw;
   width: 70%;
   justify-self: center;
   align-self: center;
@@ -580,6 +580,12 @@ footer img {
   padding-left: 7vw;
   margin: 0 auto;
   width: 20vw;
+}
+
+@media (max-width: 770px) {
+  footer img {
+    padding-top: 6vw;
+  }
 }
 
 @media (max-width: 450px) {
