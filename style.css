@@ -195,7 +195,7 @@ a {
   color: rgb(230, 163, 20);
 }
 
-#menu a:active {
+#menu a.active {
   color: rgb(230, 163, 20);
 }
 
