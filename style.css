@@ -115,7 +115,7 @@ h3 {
   background-position: 50%;
 }
 .headline {
-  padding-top: 20vw;
+  padding-top: 55vw;
   padding-bottom: 30vw;
   padding-left: 3vw;
   margin-left: 5vw;
@@ -584,12 +584,13 @@ footer img {
   }
 
   .footer_logo {
-    width: 30vw;
+    width: 40vw;
   }
 
   .insta {
-    width: 7vw;
-    padding-top: 7vw;
+    height: 10vw;
+    width: 10vw;
+    padding-top: 9vw;
   }
 
   .first_section {
